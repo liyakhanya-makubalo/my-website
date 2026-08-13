@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <header>
+        <!--Logo goes here-->
+        <!--Navigation links-->
+        <nav>
+           
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contact</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="enquiry.html">Enquiry</a>
+                <a href="consultation.html">Consultation</a>
+                
+
+        </nav>
+    </header>
+    <section class="page-hero">
+    <h1>Book a Consultation</h1>
+    <p>Get farming advice and support that suits your needs.</p>
+</section>
+
+<section class="container">
+    <div class="two-col">
+
+        <div>
+            <h2 style="color:var(--green)">Let's Discuss Your Farming Needs</h2>
+
+            <p>
+                Lilitha's Nature Relief provides farming support to subsistence
+                farmers, upcoming farmers and companies.
+            </p>
+
+            <p>
+                Use the form to request a consultation about your farming
+                requirements. You can ask about soil testing, crop care,
+                greenhouse management, technology support or general farming
+                assistance.
+            </p>
+
+            <div class="panel" style="margin-top:20px">
+                <h3>Consultation Services</h3>
+                <ul class="clean">
+                    <li>Soil testing advice</li>
+                    <li>Crop monitoring and care</li>
+                    <li>Greenhouse support</li>
+                    <li>Technology-based farming solutions</li>
+                    <li>General farming consultation</li>
+                </ul>
+            </div>
+        </div>
+
+        <form class="form" id="consultationForm">
+
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="fullName" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="service">Consultation Type</label>
+            <select id="service" name="service" required>
+                <option value="">Select a service</option>
+                <option>Soil Testing</option>
+                <option>Crop Monitoring & Care</option>
+                <option>Greenhouse Management</option>
+                <option>Technology Support</option>
+                <option>General Farming Consultation</option>
+            </select>
+
+            <label for="date">Preferred Date</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">Preferred Time</label>
+            <select id="time" name="time" required>
+                <option value="">Select a time</option>
+                <option>09:00</option>
+                <option>10:00</option>
+                <option>11:00</option>
+                <option>12:00</option>
+                <option>13:00</option>
+                <option>14:00</option>
+                <option>15:00</option>
+            </select>
+
+            <label for="message">Tell Us About Your Farming Needs</label>
+            <textarea id="message" name="message"
+                placeholder="Please explain what you would like help with."
+                required></textarea>
+
+            <button class="btn" type="submit">Request Consultation</button>
+
+            <div class="notice" id="consultationNotice">
+                Your consultation request has been submitted successfully.
+                We will contact you using the details provided.
+            </div>
+
+        </form>
+
+    </div>
+</section>
+
+<footer>
+    <div class="footer-grid">
+
+        <div>
+            <h3>Lilitha's Nature Relief</h3>
+            <p>
+                Using technology to make farming easier, more affordable
+                and environmentally friendly.
+            </p>
+        </div>
+
+        <div>
+            <h3>Quick Links</h3>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="enquiry.html">Enquiry</a>
+            <a href="consultation.html">Book Consultation</a>
+        </div>
+
+        <div>
+            <h3>Contact</h3>
+            <p>Email: makubaloliyakhanya@gmail.com</p>
+            <p>South Africa</p>
+        </div>
+
+    </div>
+
+    <div class="copyright">
+        &copy; 2026 Lilitha's Nature Relief. All rights reserved.
+    </div>
+</footer>
+
+<script>
+document.getElementById("consultationForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    document.getElementById("consultationNotice").style.display = "block";
+
+    this.reset();
+});
+</script>
+
+</body>
+</html>
