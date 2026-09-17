@@ -8,14 +8,10 @@
     margin: 0;
     padding: 0;
 }
-
-
 /* Enables smooth scrolling. */
 html {
     scroll-behavior: smooth;
 }
-
-
 /* Main body styling. */
 body {
     font-family: Arial, sans-serif;
@@ -23,39 +19,29 @@ body {
     background-color: #f1f7ef;
     color: #1d251f;
 }
-
-
 /* Makes images responsive. */
 img {
     max-width: 100%;
     height: auto;
     display: block;
 }
-
-
 /* =========================================================
    HEADER
    ========================================================= */
-
 header {
     background-color: #234d2c;
     color: white;
     padding: 20px;
     text-align: center;
 }
-
-
 /* Website title. */
 header h1 {
     font-family: Georgia, serif;
     margin-bottom: 15px;
 }
-
-
 /* =========================================================
    NAVIGATION
    ========================================================= */
-
 nav ul {
     list-style: none;
     display: flex;
@@ -63,8 +49,6 @@ nav ul {
     flex-wrap: wrap;
     gap: 10px;
 }
-
-
 /* Navigation links. */
 nav a {
     color: white;
@@ -73,108 +57,78 @@ nav a {
     display: block;
     border-radius: 5px;
 }
-
-
 /* Navigation hover effect. */
 nav a:hover {
     background-color: #3f7d45;
 }
-
-
 /* Shows the current page. */
 nav a.active {
     background-color: #3f7d45;
 }
-
-
 /* =========================================================
    HERO SECTION
    ========================================================= */
-
 .hero {
     background-color: #dfeedd;
     text-align: center;
     padding: 80px 20px;
 }
-
-
 /* Controls the width of hero content. */
 .hero-content {
     max-width: 850px;
     margin: auto;
 }
-
-
 /* Homepage main heading. */
 .hero h2 {
     font-family: Georgia, serif;
     font-size: 40px;
     margin-bottom: 20px;
 }
-
-
 /* Hero paragraphs. */
 .hero p {
     max-width: 700px;
     margin: 0 auto 20px;
 }
-
-
 /* =========================================================
    INTERNAL PAGE HERO
    ========================================================= */
-
 .page-hero {
     background-color: #dfeedd;
     text-align: center;
     padding: 50px 20px;
 }
-
-
 /* Internal page heading. */
 .page-hero h2 {
     font-family: Georgia, serif;
     font-size: 35px;
     margin-bottom: 10px;
 }
-
-
 /* =========================================================
    GENERAL CONTENT
    ========================================================= */
-
 .container {
     width: 90%;
     max-width: 1100px;
     margin: 40px auto;
 }
-
-
 /* Section headings. */
 .container h2 {
     font-family: Georgia, serif;
     margin-bottom: 15px;
     color: #234d2c;
 }
-
-
 /* Paragraph spacing. */
 .container p {
     margin-bottom: 15px;
 }
-
-
 /* Centers selected content. */
 .center-text {
     text-align: center;
     margin-top: 30px;
 }
-
-
 /* =========================================================
    BUTTONS
    ========================================================= */
-
 .button,
 button {
     display: inline-block;
@@ -187,26 +141,19 @@ button {
     cursor: pointer;
     font-size: 16px;
 }
-
-
 /* Button hover effect. */
 .button:hover,
 button:hover {
     background-color: #234d2c;
 }
-
-
 /* =========================================================
    SERVICE AND PROJECT GRID
    ========================================================= */
-
 .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
 }
-
-
 /* Individual cards. */
 .card {
     background-color: white;
@@ -214,8 +161,6 @@ button:hover {
     border: 1px solid #d3dfd0;
     border-radius: 8px;
 }
-
-
 /* Images inside cards. */
 .card img {
     width: 100%;
@@ -224,20 +169,15 @@ button:hover {
     border-radius: 5px;
     margin-bottom: 20px;
 }
-
-
 /* Card headings. */
 .card h3 {
     color: #234d2c;
     margin-bottom: 10px;
     font-family: Georgia, serif;
 }
-
-
 /* =========================================================
    CALL TO ACTION
    ========================================================= */
-
 .call-to-action {
     background-color: #dfeedd;
     text-align: center;
@@ -245,20 +185,15 @@ button:hover {
     margin-top: 40px;
     border-radius: 8px;
 }
-
-
 /* =========================================================
    FORMS
    ========================================================= */
-
 form {
     background-color: white;
     padding: 30px;
     border-radius: 8px;
     border: 1px solid #d3dfd0;
 }
-
-
 /* Form labels. */
 label {
     display: block;
@@ -266,8 +201,6 @@ label {
     margin-bottom: 5px;
     font-weight: bold;
 }
-
-
 /* Form input fields. */
 input,
 select,
@@ -279,8 +212,6 @@ textarea {
     font-family: Arial, sans-serif;
     font-size: 16px;
 }
-
-
 /* Shows a clear border when a form field is selected. */
 input:focus,
 select:focus,
@@ -288,74 +219,54 @@ textarea:focus {
     outline: 3px solid #dfeedd;
     border-color: #3f7d45;
 }
-
-
 /* Gives required fields a slightly different background. */
 input:required,
 select:required,
 textarea:required {
     background-color: #fbfdf9;
 }
-
-
 /* Form button spacing. */
 button {
     margin-top: 20px;
 }
-
-
 /* =========================================================
    CONTACT PAGE
    ========================================================= */
-
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
 }
-
-
 /* Contact email link. */
 .contact-grid a {
     color: #234d2c;
 }
-
-
 /* Makes the map responsive. */
 .map-container {
     width: 100%;
     overflow: hidden;
     border-radius: 8px;
 }
-
-
 /* Google Maps iframe. */
 .map-container iframe {
     width: 100%;
     min-height: 350px;
     border: 0;
 }
-
-
 /* =========================================================
    SITEMAP
    ========================================================= */
-
 .sitemap-diagram {
     background-color: white;
     padding: 30px;
     border: 1px solid #d3dfd0;
     border-radius: 8px;
 }
-
-
 /* Homepage box in sitemap. */
 .sitemap-home {
     text-align: center;
     margin-bottom: 20px;
 }
-
-
 /* Homepage sitemap link. */
 .sitemap-home a {
     display: inline-block;
@@ -366,8 +277,6 @@ button {
     border-radius: 6px;
     font-weight: bold;
 }
-
-
 /* Vertical line below Home. */
 .sitemap-line {
     width: 2px;
@@ -375,16 +284,12 @@ button {
     background-color: #3f7d45;
     margin: auto;
 }
-
-
 /* Sitemap page grid. */
 .sitemap-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
-
-
 /* Individual sitemap boxes. */
 .sitemap-item {
     background-color: #f1f7ef;
@@ -392,27 +297,20 @@ button {
     padding: 20px;
     border-radius: 8px;
 }
-
-
 /* Sitemap links. */
 .sitemap-item a {
     color: #234d2c;
     font-weight: bold;
     font-size: 18px;
 }
-
-
 /* Sitemap list spacing. */
 .sitemap-item ul {
     margin-top: 10px;
     margin-left: 20px;
 }
-
-
 /* =========================================================
    FOOTER
    ========================================================= */
-
 footer {
     background-color: #234d2c;
     color: white;
@@ -420,12 +318,9 @@ footer {
     padding: 25px;
     margin-top: 50px;
 }
-
-
 /* =========================================================
    TABLET RESPONSIVE DESIGN
    ========================================================= */
-
 @media (max-width: 900px) {
 
     /* Changes the card layout to two columns. */
@@ -449,12 +344,9 @@ footer {
     }
 
 }
-
-
 /* =========================================================
    MOBILE RESPONSIVE DESIGN
    ========================================================= */
-
 @media (max-width: 600px) {
 
     /* Makes navigation vertical on small screens. */
@@ -504,8 +396,6 @@ footer {
     }
 
 }
-
-
 /* =========================================================
    SMALL MOBILE DEVICES
    ========================================================= */
