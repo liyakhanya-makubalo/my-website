@@ -2,93 +2,146 @@
 <html lang="en">
 
 <head>
+    <!-- Defines the character encoding used by the website -->
     <meta charset="UTF-8">
+
+    <!-- Makes the website responsive on phones, tablets and computers -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lilitha's Nature Relief - Home</title>
+
+    <title>Home - Lilitha's Nature Relief</title>
+
+    <!-- Connects the homepage to the external CSS stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
+    <!-- Website header containing the organisation name and navigation -->
     <header>
-        <h1>Lilitha's Nature Relief</h1>
-        <p>Smart Farming Solutions for a Better Future</p>
 
-        <nav>
-            <a href="./index.html">Home</a> |
-            <a href="./Pages/about.html">About Us</a> |
-            <a href="./Pages/services.html">Services</a> |
-            <a href="./Pages/projects.html">Projects</a> |
-            <a href="./Pages/consultation.html">Book a Consultation</a> |
-            <a href="./Pages/contact.html">Contact Us</a> |
-            <a href="./Pages/sitemap.html">Sitemap</a> 
+        <h1>Lilitha's Nature Relief</h1>
+
+        <!-- Main navigation menu -->
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="Pages/about.html">About Us</a></li>
+                <li><a href="Pages/services.html">Services</a></li>
+                <li><a href="Pages/projects.html">Projects</a></li>
+                <li><a href="Pages/consultation.html">Book Consultation</a></li>
+                <li><a href="Pages/contact.html">Contact</a></li>
+                <li><a href="Pages/sitemap.html">Site Map</a></li>
+            </ul>
         </nav>
+
     </header>
 
+    <!-- Main content of the homepage -->
     <main>
-       <img src="../my-website/Assets/images/homepage.jpg " alt="Lilitha's Nature Relief" width="50%" height="50%"
-        <section>
+
+        <!-- Hero section introduces the organisation -->
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <h2>Smart Farming Solutions for a Better Future</h2>
+
+                <p>
+                    Lilitha's Nature Relief provides practical and technology-based
+                    solutions to support farmers and agricultural businesses.
+                </p>
+
+                <p>
+                    Our services focus on improving agricultural planning,
+                    supporting crop management and helping agricultural businesses
+                    make informed decisions.
+                </p>
+
+                <a class="button" href="Pages/consultation.html">
+                    Book a Consultation
+                </a>
+
+            </div>
+
+        </section>
+
+        <!-- Introduction section -->
+        <section class="container">
+
             <h2>Welcome to Lilitha's Nature Relief</h2>
 
             <p>
-                Lilitha's Nature Relief is a South African agricultural company
-                that uses technology to make farming easier, more affordable
-                and environmentally friendly.
+                Lilitha's Nature Relief is a South African agricultural support
+                organisation that provides practical services to farmers,
+                small-scale agricultural businesses and other agricultural
+                organisations.
             </p>
 
             <p>
-                We support upcoming farmers, subsistence farmers and companies
-                by providing agricultural services and farming solutions.
+                The organisation combines practical agricultural support with
+                technology-based approaches. This allows clients to receive
+                assistance with areas such as soil testing, crop management,
+                greenhouse services, farm maintenance and agricultural
+                consultation.
             </p>
 
-            <p>
-                Our goal is to help farmers reduce costs, improve their farming
-                practices and make better use of modern technology.
+        </section>
+
+        <!-- Main services preview -->
+        <section class="container">
+
+            <h2>Our Main Services</h2>
+
+            <div class="grid">
+
+                <article class="card">
+                    <h3>Soil Testing</h3>
+                    <p>
+                        Support with understanding soil conditions and using
+                        soil information for agricultural planning.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Crop Management</h3>
+                    <p>
+                        Practical support for monitoring crop conditions
+                        and improving crop care.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Greenhouse Services</h3>
+                    <p>
+                        Support for agricultural activities carried out
+                        in controlled greenhouse environments.
+                    </p>
+                </article>
+
+            </div>
+
+            <p class="center-text">
+                <a class="button" href="Pages/services.html">
+                    View All Services
+                </a>
             </p>
 
-            <a href="services.html">View Our Services</a>
-        </section>
-
-        <section>
-            <h2>What We Do</h2>
-
-            <ul>
-                <li>Soil Testing</li>
-                <li>Crop Management</li>
-                <li>Greenhouse Services</li>
-                <li>Farming Maintenance</li>
-                <li>Technology-Based Farming Solutions</li>
-                <li>Agricultural Consultations</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Why Choose Us?</h2>
-
-            <ol>
-                <li>Affordable agricultural services</li>
-                <li>Experience in the agriculture sector</li>
-                <li>Use of modern technology</li>
-                <li>Environmentally friendly solutions</li>
-                <li>Support for upcoming farmers</li>
-            </ol>
-        </section>
-
-        <section>
-            <h2>Book a Consultation</h2>
-
-            <p>
-                Do you need help with your farming project?
-                Book an online consultation with Lilitha's Nature Relief.
-            </p>
-
-            <a href="consultation.html">Book Consultation</a>
         </section>
 
     </main>
 
+    <!-- Website footer -->
     <footer>
-        <p>&copy; 2026 Lilitha's Nature Relief. All Rights Reserved.</p>
+
+        <p>
+            &copy; 2026 Lilitha's Nature Relief.
+            All Rights Reserved.
+        </p>
+
     </footer>
+
+    <!-- Connects the page to the JavaScript file -->
+    <script src="js/script.js"></script>
 
 </body>
 
