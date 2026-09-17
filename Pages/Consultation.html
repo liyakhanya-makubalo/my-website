@@ -2,75 +2,147 @@
 <html lang="en">
 
 <head>
+
+    <!-- Character encoding -->
     <meta charset="UTF-8">
+
+    <!-- Responsive viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book a Consultation - Lilitha's Nature Relief</title>
+
+    <title>Book Consultation - Lilitha's Nature Relief</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
 </head>
 
 <body>
 
+    <!-- Website header -->
     <header>
+
         <h1>Lilitha's Nature Relief</h1>
 
-        <nav>
-            <a href="../index.html">Home</a> |
-            <a href="about.html">About Us</a> |
-            <a href="services.html">Services</a> |
-            <a href="projects.html">Projects</a> |
-            <a href="consultation.html">Book a Consultation</a> |
-            <a href="contact.html">Contact Us</a> |
-            <a href="sitemap.html">Sitemap</a> 
+        <!-- Main navigation -->
+        <nav aria-label="Main navigation">
+
+            <ul>
+
+                <li>
+                    <a href="../index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="about.html">About Us</a>
+                </li>
+
+                <li>
+                    <a href="services.html">Services</a>
+                </li>
+
+                <li>
+                    <a href="projects.html">Projects</a>
+                </li>
+
+                <li>
+                    <a href="consultation.html" class="active">
+                        Book Consultation
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+
+                <li>
+                    <a href="sitemap.html">Site Map</a>
+                </li>
+
+            </ul>
+
         </nav>
+
     </header>
+
 
     <main>
 
-        <h2>Book a Consultation</h2>
+        <!-- Consultation page introduction -->
+        <section class="page-hero">
 
-        <p>
-            Complete the form below to request an agricultural
-            consultation with Lilitha's Nature Relief.
-        </p>
+            <h2>Book a Consultation</h2>
 
-        <form action="#" method="post">
+            <p>
+                Tell us about your agricultural needs and request
+                a consultation.
+            </p>
 
-            <fieldset>
+        </section>
 
-                <legend>Personal Information</legend>
 
-                <label for="fullname">Full Name:</label>
-                <input type="text" id="fullname" name="fullname"
+        <section class="container">
+
+            <h2>Consultation Request</h2>
+
+            <p>
+                Please complete the form below. Providing accurate
+                information helps us understand the type of
+                agricultural support you require.
+            </p>
+
+
+            <!-- Consultation form -->
+            <form action="#" method="post">
+
+                <label for="fullname">
+                    Full Name
+                </label>
+
+                <input type="text"
+                       id="fullname"
+                       name="fullname"
+                       placeholder="Enter your full name"
                        required>
 
-                <br><br>
 
-                <label for="email">Email Address:</label>
-                <input type="email" id="email" name="email"
+                <label for="email">
+                    Email Address
+                </label>
+
+                <input type="email"
+                       id="email"
+                       name="email"
+                       placeholder="example@email.com"
                        required>
 
-                <br><br>
 
-                <label for="phone">Phone Number:</label>
-                <input type="tel" id="phone" name="phone"
+                <label for="phone">
+                    Phone Number
+                </label>
+
+                <input type="tel"
+                       id="phone"
+                       name="phone"
+                       placeholder="Enter your phone number"
                        required>
 
-            </fieldset>
 
-            <br>
+                <label for="consultation-type">
+                    Consultation Type
+                </label>
 
-            <fieldset>
+                <select id="consultation-type"
+                        name="consultation-type"
+                        required>
 
-                <legend>Consultation Information</legend>
+                    <option value="">
+                        Choose a consultation
+                    </option>
 
-                <label for="service">Select a Service:</label>
-
-                <select id="service" name="service">
-
-                    <option value="soil-testing">
+                    <option value="soil">
                         Soil Testing
                     </option>
 
-                    <option value="crop-management">
+                    <option value="crop">
                         Crop Management
                     </option>
 
@@ -78,42 +150,59 @@
                         Greenhouse Services
                     </option>
 
-                    <option value="farm-maintenance">
+                    <option value="maintenance">
                         Farm Maintenance
                     </option>
 
-                    <option value="agricultural-consultation">
-                        Agricultural Consultation
+                    <option value="technology">
+                        Technology-Based Solutions
                     </option>
 
-                    <option value="technology">
-                        Technology-Based Farming Solutions
+                    <option value="general">
+                        General Agricultural Consultation
                     </option>
 
                 </select>
 
-                <br><br>
 
-                <label for="date">Preferred Date:</label>
-                <input type="date" id="date" name="date">
+                <label for="date">
+                    Preferred Date
+                </label>
 
-                <br><br>
+                <input type="date"
+                       id="date"
+                       name="date"
+                       required>
 
-                <label for="time">Preferred Time:</label>
-                <input type="time" id="time" name="time">
 
-                <br><br>
+                <label for="time">
+                    Preferred Time
+                </label>
 
-                <label for="province">Province:</label>
+                <input type="time"
+                       id="time"
+                       name="time"
+                       required>
 
-                <select id="province" name="province">
+
+                <label for="province">
+                    Province
+                </label>
+
+                <select id="province"
+                        name="province"
+                        required>
+
+                    <option value="">
+                        Select province
+                    </option>
 
                     <option value="eastern-cape">
                         Eastern Cape
                     </option>
 
-                    <option value="western-cape">
-                        Western Cape
+                    <option value="free-state">
+                        Free State
                     </option>
 
                     <option value="gauteng">
@@ -132,47 +221,52 @@
                         Mpumalanga
                     </option>
 
-                    <option value="north-west">
-                        North West
-                    </option>
-
-                    <option value="free-state">
-                        Free State
-                    </option>
-
                     <option value="northern-cape">
                         Northern Cape
                     </option>
 
+                    <option value="north-west">
+                        North West
+                    </option>
+
+                    <option value="western-cape">
+                        Western Cape
+                    </option>
+
                 </select>
 
-                <br><br>
 
-                <label for="message">
-                    Tell us about your farming needs:
+                <label for="needs">
+                    Agricultural Needs
                 </label>
 
-                <br>
+                <textarea id="needs"
+                          name="needs"
+                          rows="6"
+                          placeholder="Please describe the agricultural support you require."
+                          required></textarea>
 
-                <textarea id="message"
-                          name="message"
-                          rows="8"
-                          cols="50"></textarea>
 
-            </fieldset>
+                <!-- Submits the form -->
+                <button type="submit">
+                    Submit Consultation Request
+                </button>
 
-            <br>
+            </form>
 
-            <input type="submit" value="Submit Consultation Request">
-
-            <input type="reset" value="Clear Form">
-
-        </form>
+        </section>
 
     </main>
 
+
+    <!-- Website footer -->
     <footer>
-        <p>&copy; 2026 Lilitha's Nature Relief.</p>
+
+        <p>
+            &copy; 2026 Lilitha's Nature Relief.
+            All Rights Reserved.
+        </p>
+
     </footer>
 
 </body>
