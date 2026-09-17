@@ -2,119 +2,192 @@
 <html lang="en">
 
 <head>
+
+    <!-- Character encoding -->
     <meta charset="UTF-8">
+
+    <!-- Responsive viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Lilitha's Nature Relief</title>
+
+    <title>Contact - Lilitha's Nature Relief</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
 </head>
 
 <body>
 
+    <!-- Website header -->
     <header>
+
         <h1>Lilitha's Nature Relief</h1>
 
-        <nav>
-            <a href="../index.html">Home</a> |
-            <a href="about.html">About Us</a> |
-            <a href="services.html">Services</a> |
-            <a href="projects.html">Projects</a> |
-            <a href="consultation.html">Book a Consultation</a> |
-            <a href="contact.html">Contact Us</a> |
-            <a href="sitemap.html">Sitemap</a> 
+        <!-- Main navigation -->
+        <nav aria-label="Main navigation">
+
+            <ul>
+
+                <li>
+                    <a href="../index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="about.html">About Us</a>
+                </li>
+
+                <li>
+                    <a href="services.html">Services</a>
+                </li>
+
+                <li>
+                    <a href="projects.html">Projects</a>
+                </li>
+
+                <li>
+                    <a href="consultation.html">
+                        Book Consultation
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html" class="active">
+                        Contact
+                    </a>
+                </li>
+
+                <li>
+                    <a href="sitemap.html">Site Map</a>
+                </li>
+
+            </ul>
+
         </nav>
+
     </header>
+
 
     <main>
 
-        <h2>Contact Us</h2>
+        <!-- Contact page introduction -->
+        <section class="page-hero">
 
-        <p>
-            Do you have a question about our agricultural services?
-            Contact Lilitha's Nature Relief.
-        </p>
-
-        <section>
-
-            <h3>Contact Information</h3>
+            <h2>Contact Us</h2>
 
             <p>
-                <strong>Organisation:</strong>
-                Lilitha's Nature Relief
-            </p>
-
-            <p>
-                <strong>Email:</strong>
-                <a href="mailto:makubaloliyakhanya@gmail.com"> 
-                    makubaloliyakhanya@gmail.com
-                </a>
-            </p>
-
-            <p>
-                Phone:
-                  <a href="tel:+27712345678">071 234 5678</a>
-            </p>
-
-            <p>
-               <p><b> Location:</b></p>
-               <p>
-                <iframe
-                    src="https://www.google.com/maps?q=12%20Vimbi%20Close%2C%20Bisho%2C%20Eastern%20Cape%2C%20South%20Africa&output=embed"
-                    width="600"
-                    height="450"
-                    allowfullscreen=""
-                    loading="lazy">
-</iframe>
-                
-               </p>
+                We would love to hear from you.
             </p>
 
         </section>
 
-        <section>
 
-            <h3>Send Us an Enquiry</h3>
+        <section class="container">
 
-            <form action="#" method="post">
+            <div class="contact-grid">
 
-                <label for="name">Full Name:</label>
-                <input type="text" id="name" name="name"
-                       required>
+                <!-- Contact information -->
+                <div>
 
-                <br><br>
+                    <h2>Contact Information</h2>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email"
-                       required>
+                    <p>
+                        <strong>Email:</strong>
+                        <a href="mailto:makubaloliyakhanya@gmail.com">
+                            makubaloliyakhanya@gmail.com
+                        </a>
+                    </p>
 
-                <br><br>
+                    <p>
+                        <strong>Location:</strong>
+                        Eastern Cape, South Africa
+                    </p>
 
-                <label for="subject">Subject:</label>
-                <input type="text" id="subject" name="subject"
-                       required>
 
-                <br><br>
+                    <h2>Business Location</h2>
 
-                <label for="message">Message:</label>
+                    <p>
+                        The map below shows the location provided
+                        for Lilitha's Nature Relief.
+                    </p>
 
-                <br>
 
-                <textarea id="message"
-                          name="message"
-                          rows="8"
-                          cols="50"
-                          required></textarea>
+                    <!-- Google Maps location -->
+                    <div class="map-container">
 
-                <br><br>
+                        <iframe
+                            src="https://www.google.com/maps?q=12%20Vimbi%20Close%2C%20Bisho%2C%20Eastern%20Cape%2C%20South%20Africa&output=embed"
+                            title="Map showing Lilitha's Nature Relief location"
+                            loading="lazy"
+                            allowfullscreen>
+                        </iframe>
 
-                <input type="submit" value="Send Enquiry">
+                    </div>
 
-            </form>
+                </div>
+
+
+                <!-- Contact form -->
+                <div>
+
+                    <h2>Send Us a Message</h2>
+
+                    <form action="#" method="post">
+
+                        <label for="contact-name">
+                            Name
+                        </label>
+
+                        <input type="text"
+                               id="contact-name"
+                               name="contact-name"
+                               placeholder="Enter your name"
+                               required>
+
+
+                        <label for="contact-email">
+                            Email
+                        </label>
+
+                        <input type="email"
+                               id="contact-email"
+                               name="contact-email"
+                               placeholder="Enter your email"
+                               required>
+
+
+                        <label for="contact-message">
+                            Message
+                        </label>
+
+                        <textarea id="contact-message"
+                                  name="contact-message"
+                                  rows="6"
+                                  placeholder="Enter your message"
+                                  required></textarea>
+
+
+                        <button type="submit">
+                            Send Message
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
 
         </section>
 
     </main>
 
+
+    <!-- Website footer -->
     <footer>
-        <p>&copy; 2026 Lilitha's Nature Relief.</p>
+
+        <p>
+            &copy; 2026 Lilitha's Nature Relief.
+            All Rights Reserved.
+        </p>
+
     </footer>
 
 </body>
