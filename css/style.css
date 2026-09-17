@@ -92,6 +92,13 @@ nav a.active {
 /* =========================================================
    INTERNAL PAGE HERO
    ========================================================= */
+   /* Controls the size of the homepage image */
+.homepage-image {
+    width: 500px;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+}
 .page-hero {
     background-color: #dfeedd;
     text-align: center;
