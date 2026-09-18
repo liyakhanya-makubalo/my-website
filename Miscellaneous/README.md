@@ -10,7 +10,7 @@
 
 **Student Name:** Liyakhanya Makubalo
 **Student Number:** ST10535974
-**Module:** WEDES020
+**Module:** WEDE5020
 **Project:** Website Project
 **Organisation:** Lilitha's Nature Relief
 
@@ -22,26 +22,11 @@ Lilitha's Nature Relief is a website project designed to provide information abo
 
 The website is designed to be simple, easy to use and easy to navigate. It allows visitors to learn more about Lilitha's Nature Relief, view the services provided, view projects, book a consultation and find contact information.
 
-The website is developed using front-end web technologies, mainly HTML. The website focuses on creating a clear structure and providing useful information to visitors.
-
 ---
 
 ## Website Goals and Objectives
 
 The main goal of the website is to create an informative and user-friendly online presence for Lilitha's Nature Relief.
-
-### Objectives
-
-* Provide information about Lilitha's Nature Relief.
-* Explain the services offered by the organisation.
-* Display projects completed or supported by the organisation.
-* Allow visitors to book a consultation.
-* Provide contact information for visitors.
-* Make the website easy to navigate.
-* Create a clear and organised website structure.
-* Provide a sitemap showing the structure of the website.
-
----
 
 ## Key Features and Functionality
 
@@ -232,8 +217,88 @@ The project files are maintained in a remote Git repository. Changes to the webs
 
 ---
 
-## Conclusion
+## Part 2
 
-Lilitha's Nature Relief is designed to provide visitors with a simple and informative website. The website gives visitors access to information about the organisation, its services and projects. It also provides consultation and contact options.
+### Introduction
 
-The project will continue to be improved throughout the remaining parts of the assessment, with changes and improvements recorded in the changelog.
+Part 2 focuses on improving the website based on the feedback received
+from Part 1. The website was updated to improve its design, structure,
+content, navigation and technical implementation.
+
+The website was developed using HTML5 and CSS.
+
+
+---
+
+### Part 2 Website Improvements
+
+The following improvements were made during Part 2:
+
+- Improved the website design using CSS.
+- Improved the layout of the website pages.
+- Added responsive design for different screen sizes.
+- Added images to relevant pages.
+- Improved the website navigation.
+- Added active navigation links to identify the current page.
+- Improved the Services page with more detailed information.
+- Improved the Projects page with project descriptions.
+- Improved the Consultation page and form.
+- Improved the Contact page.
+- Added a clearly designed sitemap.
+- Added comments to the HTML and CSS code.
+- Improved the file and folder structure.
+- Corrected file naming conventions.
+- Updated the README.md file.
+- Updated the references.
+
+---
+
+### Part 2 Technical Requirements
+
+The website uses the following technologies:
+
+**HTML5**
+
+HTML5 is used to create the structure and content of the website.
+Semantic HTML elements such as header, nav, main, section, article
+and footer are used.
+
+**CSS3**
+
+CSS3 is used to control the appearance and layout of the website.
+This includes colours, fonts, buttons, forms, cards, images and
+responsive layouts.
+
+**Responsive Design**
+
+CSS media queries are used to allow the website to adapt to
+different screen sizes, including desktop, tablet and mobile devices.
+
+**Forms**
+
+HTML forms are used on the Consultation and Contact pages.
+Required fields are included to help ensure that users complete
+the necessary information.
+
+---
+
+### Part 2 File and Folder Structure
+
+```text
+my-website/
+│
+├── index.html
+│
+├── Pages/
+│   ├── about.html
+│   ├── services.html
+│   ├── projects.html
+│   ├── consultation.html
+│   ├── contact.html
+│   └── sitemap.html
+│
+├── css/
+│   └── style.css
+│
+└── Assets/
+    └── images/
