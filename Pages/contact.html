@@ -1,218 +1,184 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Contact Us | Lilitha's Nature Relief</title>
-
-    <meta name="description"
-          content="Contact Lilitha's Nature Relief in the Eastern Cape, South Africa. Send a general message or find the organisation's location.">
-
-    <meta name="keywords"
-          content="contact Lilitha's Nature Relief, agricultural support contact, Eastern Cape South Africa">
-
+    <title>Contact - Lilitha's Nature Relief</title>
+    <meta name="description" content="Contact Lilitha's Nature Relief in the Eastern Cape, South Africa, with a question, comment or general message.">
+    <meta name="keywords" content="Lilitha's Nature Relief, agricultural support, farming services, soil testing, crop management, South Africa">
     <meta name="author" content="Lilitha's Nature Relief">
     <meta name="robots" content="index, follow">
-
-    <link rel="canonical"
-          href="https://liyakhanya-makubalo.github.io/my-website/Pages/contact.html">
-
+    <meta name="theme-color" content="#234d2c">
+    <meta property="og:site_name" content="Lilitha's Nature Relief">
+    <meta property="og:title" content="Contact - Lilitha's Nature Relief">
+    <meta property="og:description" content="Contact Lilitha's Nature Relief in the Eastern Cape, South Africa, with a question, comment or general message.">
+    <meta property="og:type" content="website">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="canonical" href="https://liyakhanya-makubalo.github.io/my-website/Pages/contact.html">
+    <meta property="og:url" content="https://liyakhanya-makubalo.github.io/my-website/Pages/contact.html">
 
-    <!-- Leaflet interactive map stylesheet -->
     <link rel="stylesheet"
-          href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin="">
 </head>
 
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
-<header>
-    <h1>Lilitha's Nature Relief</h1>
+    <header>
+        <h1>Lilitha's Nature Relief</h1>
 
-    <button id="menu-toggle" aria-expanded="false"
-            aria-controls="main-navigation">Menu</button>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="consultation.html">Book Consultation</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="sitemap.html">Site Map</a></li>
+            </ul>
+        </nav>
 
-    <nav aria-label="Main navigation">
-        <ul class="nav-links" id="main-navigation">
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="consultation.html">Book Consultation</a></li>
-            <li><a href="enquiry.html">Enquiry</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="sitemap.html">Site Map</a></li>
-        </ul>
-    </nav>
-</header>
-
-<main>
-
-    <section class="page-hero">
-        <h2>Contact Us</h2>
-
-        <p>
-            We would love to hear from you.
-        </p>
-    </section>
-
-    <section class="container">
-
-        <div class="contact-grid">
-
-            <div>
-
-                <h2>Contact Information</h2>
-
-                <p>
-                    <strong>Email:</strong>
-                    <a href="mailto:makubaloliyakhanya@gmail.com">
-                        makubaloliyakhanya@gmail.com
-                    </a>
-                </p>
-
-                <p>
-                    <strong>Location:</strong>
-                    Eastern Cape, South Africa
-                </p>
-
-                <h2>Business Location</h2>
-
-                <p>
-                    The interactive map below shows the Bisho area
-                    in the Eastern Cape.
-                </p>
-
-                <div id="map"
-                     role="application"
-                     aria-label="Interactive map showing the Bisho area">
-                </div>
-
-                <p>
-                    <a href="https://www.openstreetmap.org/"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        View OpenStreetMap
-                    </a>
-                </p>
-
-            </div>
-
-            <div>
-
-                <h2>Send Us a Message</h2>
-
-                <form class="ajax-form"
-                      action="https://formsubmit.co/ajax/makubaloliyakhanya@gmail.com"
-                      method="POST"
-                      data-success-message="Thank you for contacting Lilitha's Nature Relief. Your message has been submitted successfully.">
-
-                    <input type="hidden" name="_subject"
-                           value="General Contact Message - Lilitha's Nature Relief">
-
-                    <input type="hidden" name="_template" value="table">
-
-                    <input type="text" name="_honey"
-                           style="display:none" tabindex="-1"
-                           autocomplete="off">
-
-                    <label for="contact-name">Full Name</label>
-
-                    <input type="text"
-                           id="contact-name"
-                           name="Full Name"
-                           minlength="3"
-                           maxlength="80"
-                           placeholder="Enter your name"
-                           autocomplete="name"
-                           required>
-
-                    <label for="contact-email">Email Address</label>
-
-                    <input type="email"
-                           id="contact-email"
-                           name="Email Address"
-                           placeholder="Enter your email"
-                           autocomplete="email"
-                           required>
-
-                    <label for="contact-phone">Phone Number</label>
-
-                    <input type="tel"
-                           id="contact-phone"
-                           name="Phone Number"
-                           minlength="9"
-                           maxlength="18"
-                           placeholder="+27 00 000 0000"
-                           autocomplete="tel"
-                           required>
-
-                    <label for="message-type">Type of Message</label>
-
-                    <select id="message-type"
-                            name="Type of Message"
-                            required>
-
-                        <option value="">Select message type</option>
-                        <option value="General Question">General Question</option>
-                        <option value="Feedback">Feedback</option>
-                        <option value="Complaint">Complaint</option>
-                        <option value="Other">Other</option>
-
-                    </select>
-
-                    <label for="contact-subject">Subject</label>
-
-                    <input type="text"
-                           id="contact-subject"
-                           name="Subject"
-                           minlength="3"
-                           maxlength="100"
-                           placeholder="Enter message subject"
-                           required>
-
-                    <label for="contact-message">Full Message</label>
-
-                    <textarea id="contact-message"
-                              name="Message"
-                              rows="6"
-                              minlength="10"
-                              maxlength="2000"
-                              placeholder="Write your message here..."
-                              required></textarea>
-
-                    <p class="form-feedback"
-                       aria-live="polite"></p>
-
-                    <button type="submit">
-                        Send Message
-                    </button>
-
-                </form>
-
-            </div>
-
+        <div class="datetime-container" aria-label="Current South African date and time">
+            <span><strong>Date:</strong> <time id="current-date">Loading...</time></span>
+            <span><strong>Time:</strong> <time id="current-time">Loading...</time> SAST</span>
         </div>
+    </header>
 
-    </section>
+    <main id="main-content">
+        <section class="page-hero">
+            <h2>Contact Us</h2>
+            <p>We would love to hear from you.</p>
+        </section>
 
-</main>
+        <section class="container">
+            <div class="contact-grid">
 
-<footer>
-    <p>
-        &copy; <span data-year>2026</span>
-        Lilitha's Nature Relief. All Rights Reserved.
-    </p>
-</footer>
+                <div>
+                    <h2>Contact Information</h2>
 
-<!-- Leaflet map library -->
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+                    <p>
+                        <strong>Email:</strong>
+                        <a href="mailto:makubaloliyakhanya@gmail.com">
+                            makubaloliyakhanya@gmail.com
+                        </a>
+                    </p>
 
-<!-- Website JavaScript -->
-<script src="../js/script.js"></script>
+                    <p>
+                        <strong>Location:</strong>
+                        Eastern Cape, South Africa
+                    </p>
 
+                    <h2>Business Location</h2>
+
+                    <p>
+                        The map below shows the location provided
+                        for Lilitha's Nature Relief.
+                    </p>
+
+                    <div class="map-container">
+                        <iframe
+                            src="https://www.google.com/maps?q=12%20Vimbi%20Close%2C%20Bisho%2C%20Eastern%20Cape%2C%20South%20Africa&output=embed"
+                            title="Map showing Lilitha's Nature Relief location"
+                            loading="lazy"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+
+
+
+                <div>
+                    <h2>Send Us a Message</h2>
+
+                    <form id="contact-form"
+                        action="https://formsubmit.co/ajax/makubaloliyakhanya@gmail.com"
+                        method="POST" novalidate>
+
+                        <input type="hidden" name="_subject"
+                            value="Website contact message - Lilitha's Nature Relief">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_captcha" value="true">
+
+                        <label for="contact-name">Name</label>
+                        <input type="text" id="contact-name" name="name"
+                            minlength="2" maxlength="80"
+                            autocomplete="name"
+                            placeholder="Enter your name" required>
+
+                        <label for="contact-email">Email</label>
+                        <input type="email" id="contact-email" name="email"
+                            maxlength="120" autocomplete="email"
+                            placeholder="Enter your email" required>
+
+                        <label for="contact-phone">Phone Number</label>
+                        <input type="tel" id="contact-phone" name="phone"
+                            placeholder="e.g. 071 234 5678"
+                            pattern="[+]?[0-9 ]{9,15}"
+                            minlength="9" maxlength="16"
+                            autocomplete="tel" required>
+
+                        <label for="message-type">Type of Message</label>
+                        <select id="message-type" name="message-type" required>
+                            <option value="">Choose message type</option>
+                            <option value="General enquiry">General enquiry</option>
+                            <option value="Feedback">Feedback</option>
+                            <option value="Compliment">Compliment</option>
+                            <option value="Complaint">Complaint</option>
+                            <option value="Other">Other</option>
+                        </select>
+
+                        <label for="contact-subject">Subject</label>
+                        <input type="text" id="contact-subject"
+                            name="subject" placeholder="Enter a subject"
+                            minlength="3" maxlength="100" required>
+
+                        <label for="contact-message">Message</label>
+                        <textarea id="contact-message"
+                            name="contact-message"
+                            rows="6" minlength="10" maxlength="2000"
+                            placeholder="Enter your message"
+                            required></textarea>
+
+                        <label class="consent-label">
+                            <input type="checkbox" name="consent"
+                                id="contact-consent" required>
+                            I agree that my details may be used to respond
+                            to this message.
+                        </label>
+
+                        <p class="form-note">
+                            Your message is submitted using the configured
+                            form service. The site owner must activate the
+                            service using the confirmation email after its
+                            first submission.
+                        </p>
+
+                        <div class="form-feedback" id="contact-feedback"
+                            role="status" aria-live="polite"></div>
+
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            &copy; 2026 Lilitha's Nature Relief.
+            All Rights Reserved.
+        </p>
+    </footer>
+
+    
+
+    <script defer src="../js/script.js"></script>
+
+    <button type="button" id="back-to-top" class="back-to-top"
+        aria-label="Back to top" title="Back to top">↑</button>
 </body>
 </html>
+

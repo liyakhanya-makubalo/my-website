@@ -1,463 +1,383 @@
-
-/* ==========================================
-   LILITHA'S NATURE RELIEF
-   PART 3 - JAVASCRIPT
-   ========================================== */
-
+/* Lilitha's Nature Relief - Part 3 interactive features */
 'use strict';
 
 document.addEventListener('DOMContentLoaded', function () {
 
-    /* 1. AUTOMATIC FOOTER YEAR */
+    // Display the current date and time using South African Standard Time.
+    const dateElement = document.getElementById('current-date');
+    const timeElement = document.getElementById('current-time');
 
-    document.querySelectorAll('[data-year]').forEach(function (element) {
-        element.textContent = new Date().getFullYear();
+    function updateSouthAfricanClock() {
+        const now = new Date();
+
+        const dateOptions = {
+            timeZone: 'Africa/Johannesburg',
+            day: '2-digit',
+            month: 'long',
+            year: 'numeric'
+        };
+
+        const timeOptions = {
+            timeZone: 'Africa/Johannesburg',
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit',
+            hour12: false
+        };
+
+        if (dateElement) {
+            dateElement.textContent =
+                new Intl.DateTimeFormat('en-ZA', dateOptions).format(now);
+        }
+
+        if (timeElement) {
+            timeElement.textContent =
+                new Intl.DateTimeFormat('en-ZA', timeOptions).format(now);
+        }
+    }
+
+    updateSouthAfricanClock();
+    window.setInterval(updateSouthAfricanClock, 1000);
+
+    // Update the copyright year automatically.
+    document.querySelectorAll('footer p').forEach(function (footer) {
+        footer.innerHTML = footer.innerHTML.replace(
+            /©\s*\d{4}/,
+            '© ' + new Date().getFullYear()
+        );
     });
 
+    // Highlight the current page in the navigation.
+    const currentFile =
+        window.location.pathname.split('/').pop() || 'index.html';
 
-    /* 2. MOBILE NAVIGATION */
+    document.querySelectorAll('nav a').forEach(function (link) {
+        const linkFile = link.getAttribute('href').split('/').pop();
 
-    const menuButton = document.getElementById('menu-toggle');
-    const navigation = document.querySelector('.nav-links');
-
-    if (menuButton && navigation) {
-        menuButton.addEventListener('click', function () {
-            const isOpen = navigation.classList.toggle('show');
-
-            menuButton.setAttribute('aria-expanded', isOpen);
-            menuButton.textContent = isOpen ? 'Close Menu' : 'Menu';
-        });
-    }
-
-
-    /* 3. DYNAMIC SERVICE CONTENT */
-
-    const serviceContainer = document.getElementById('dynamic-services');
-
-    const services = [
-        {
-            title: 'Soil Testing',
-            description: 'Soil testing provides information about soil conditions and supports better-informed agricultural planning.'
-        },
-        {
-            title: 'Crop Management',
-            description: 'Crop management focuses on monitoring crop conditions and providing practical guidance on crop care.'
-        },
-        {
-            title: 'Greenhouse Services',
-            description: 'Greenhouse services provide support for controlled agricultural environments and greenhouse management.'
-        },
-        {
-            title: 'Farm Maintenance',
-            description: 'Farm maintenance focuses on practical agricultural maintenance activities and organised working areas.'
-        },
-        {
-            title: 'Agricultural Consultation',
-            description: 'Agricultural consultations allow clients to discuss their specific agricultural needs and possible solutions.'
-        },
-        {
-            title: 'Technology-Based Farming Solutions',
-            description: 'Technology-based solutions support agricultural activities through monitoring tools and digital information.'
+        if (linkFile === currentFile) {
+            link.classList.add('active');
+            link.setAttribute('aria-current', 'page');
+        } else {
+            link.classList.remove('active');
+            link.removeAttribute('aria-current');
         }
-    ];
+    });
 
-    if (serviceContainer) {
+    // Live search for service and project cards.
+    const search = document.getElementById('content-search');
 
-        serviceContainer.innerHTML = '';
+    if (search) {
+        const cards = Array.from(
+            document.querySelectorAll('.searchable-grid .card')
+        );
 
-        services.forEach(function (service) {
+        const count = document.getElementById('search-count');
 
-            const article = document.createElement('article');
-            article.className = 'card searchable-item';
+        function filterCards() {
+            const term = search.value.trim().toLocaleLowerCase();
+            let visible = 0;
 
-            const heading = document.createElement('h3');
-            heading.textContent = service.title;
+            cards.forEach(function (card) {
+                const matches = card.textContent
+                    .toLocaleLowerCase()
+                    .includes(term);
 
-            const paragraph = document.createElement('p');
-            paragraph.textContent = service.description;
+                card.hidden = !matches;
 
-            const link = document.createElement('a');
-            link.href = 'enquiry.html';
-            link.className = 'button';
-            link.textContent = 'Enquire about this service';
-
-            article.appendChild(heading);
-            article.appendChild(paragraph);
-            article.appendChild(link);
-
-            serviceContainer.appendChild(article);
-
-        });
-
-    }
-
-
-    /* 4. SEARCH FUNCTIONALITY */
-
-    const searchInput = document.getElementById('site-search');
-    const searchItems = document.querySelectorAll('.searchable-item');
-    const searchMessage = document.getElementById('search-message');
-
-    if (searchInput) {
-
-        searchInput.addEventListener('input', function () {
-
-            const searchTerm = searchInput.value.toLowerCase().trim();
-            let visibleItems = 0;
-
-            searchItems.forEach(function (item) {
-
-                const itemText = item.textContent.toLowerCase();
-
-                if (itemText.includes(searchTerm)) {
-                    item.hidden = false;
-                    visibleItems++;
-                } else {
-                    item.hidden = true;
+                if (matches) {
+                    visible++;
                 }
-
             });
 
-            if (searchMessage) {
-                searchMessage.textContent =
-                    visibleItems + ' result(s) found.';
+            if (count) {
+                count.textContent =
+                    visible + ' item' + (visible === 1 ? '' : 's') + ' shown';
             }
+        }
 
-        });
-
+        search.addEventListener('input', filterCards);
+        filterCards();
     }
 
+    // Accessible image lightbox for project/gallery images.
+    const images = document.querySelectorAll('.card img, .gallery-image');
 
-    /* 5. IMAGE GALLERY LIGHTBOX */
-
-    const galleryImages = document.querySelectorAll('.gallery-image');
-
-    if (galleryImages.length > 0) {
-
+    if (images.length) {
         const lightbox = document.createElement('div');
 
         lightbox.className = 'lightbox';
-
         lightbox.setAttribute('role', 'dialog');
         lightbox.setAttribute('aria-modal', 'true');
-        lightbox.setAttribute('aria-label', 'Image gallery viewer');
+        lightbox.setAttribute('aria-label', 'Enlarged image preview');
 
         lightbox.innerHTML = `
-            <button class="lightbox-close"
-                    aria-label="Close image">&times;</button>
-
-            <button class="lightbox-prev"
-                    aria-label="Previous image">&#10094;</button>
-
-            <figure>
-                <img class="lightbox-image" src="" alt="">
-                <figcaption class="lightbox-caption"></figcaption>
-            </figure>
-
-            <button class="lightbox-next"
-                    aria-label="Next image">&#10095;</button>
+            <button type="button" class="lightbox-close"
+                aria-label="Close image preview">&times;</button>
+            <img alt="">
+            <p class="lightbox-caption"></p>
         `;
 
         document.body.appendChild(lightbox);
 
-        const largeImage = lightbox.querySelector('.lightbox-image');
+        const preview = lightbox.querySelector('img');
         const caption = lightbox.querySelector('.lightbox-caption');
 
-        const closeButton = lightbox.querySelector('.lightbox-close');
-        const previousButton = lightbox.querySelector('.lightbox-prev');
-        const nextButton = lightbox.querySelector('.lightbox-next');
-
-        let currentIndex = 0;
         let previousFocus = null;
 
-        function showImage(index) {
-
-            currentIndex =
-                (index + galleryImages.length) % galleryImages.length;
-
-            const selectedImage = galleryImages[currentIndex];
-
-            largeImage.src = selectedImage.src;
-            largeImage.alt = selectedImage.alt;
-
-            caption.textContent = selectedImage.alt;
-
-        }
-
-        function openLightbox(index) {
-
-            previousFocus = document.activeElement;
-
-            showImage(index);
-
-            lightbox.classList.add('active');
-            document.body.classList.add('lightbox-open');
-
-            closeButton.focus();
-
-        }
-
         function closeLightbox() {
-
-            lightbox.classList.remove('active');
-            document.body.classList.remove('lightbox-open');
+            lightbox.classList.remove('open');
+            document.body.classList.remove('no-scroll');
 
             if (previousFocus) {
                 previousFocus.focus();
             }
-
         }
 
-        galleryImages.forEach(function (image, index) {
+        images.forEach(function (img) {
+            img.classList.add('zoomable-image');
+            img.tabIndex = 0;
+            img.setAttribute('role', 'button');
 
-            image.setAttribute('tabindex', '0');
-            image.setAttribute('role', 'button');
-            image.setAttribute('aria-label', 'Open image: ' + image.alt);
+            img.setAttribute(
+                'aria-label',
+                'View larger image: ' + (img.alt || 'Website image')
+            );
 
-            image.addEventListener('click', function () {
-                openLightbox(index);
-            });
+            function openLightbox() {
+                previousFocus = img;
+                preview.src = img.currentSrc || img.src;
+                preview.alt = img.alt || 'Enlarged website image';
+                caption.textContent = img.alt || '';
 
-            image.addEventListener('keydown', function (event) {
+                lightbox.classList.add('open');
+                document.body.classList.add('no-scroll');
 
+                lightbox.querySelector('.lightbox-close').focus();
+            }
+
+            img.addEventListener('click', openLightbox);
+
+            img.addEventListener('keydown', function (event) {
                 if (event.key === 'Enter' || event.key === ' ') {
                     event.preventDefault();
-                    openLightbox(index);
+                    openLightbox();
                 }
-
             });
-
         });
 
-        closeButton.addEventListener('click', closeLightbox);
-
-        previousButton.addEventListener('click', function () {
-            showImage(currentIndex - 1);
-        });
-
-        nextButton.addEventListener('click', function () {
-            showImage(currentIndex + 1);
-        });
+        lightbox.querySelector('.lightbox-close')
+            .addEventListener('click', closeLightbox);
 
         lightbox.addEventListener('click', function (event) {
-
             if (event.target === lightbox) {
                 closeLightbox();
             }
-
         });
 
         document.addEventListener('keydown', function (event) {
-
-            if (!lightbox.classList.contains('active')) return;
-
-            if (event.key === 'Escape') {
+            if (
+                event.key === 'Escape' &&
+                lightbox.classList.contains('open')
+            ) {
                 closeLightbox();
             }
-
-            if (event.key === 'ArrowRight') {
-                showImage(currentIndex + 1);
-            }
-
-            if (event.key === 'ArrowLeft') {
-                showImage(currentIndex - 1);
-            }
-
         });
-
     }
 
+    // Prevent consultation dates in the past.
+    const dateInput = document.getElementById('date');
 
-    /* 6. ACCORDION FUNCTIONALITY */
+    if (dateInput) {
+        const southAfricanToday = new Intl.DateTimeFormat('en-CA', {
+            timeZone: 'Africa/Johannesburg',
+            year: 'numeric',
+            month: '2-digit',
+            day: '2-digit'
+        }).format(new Date());
 
-    const accordionButtons = document.querySelectorAll('.accordion-button');
-
-    accordionButtons.forEach(function (button) {
-
-        button.addEventListener('click', function () {
-
-            const content = button.nextElementSibling;
-
-            const expanded =
-                button.getAttribute('aria-expanded') === 'true';
-
-            button.setAttribute('aria-expanded', String(!expanded));
-
-            content.hidden = expanded;
-
-        });
-
-    });
-
-
-    /* 7. LEAFLET INTERACTIVE MAP */
-
-    const mapElement = document.getElementById('map');
-
-    if (mapElement && typeof L !== 'undefined') {
-
-        const map = L.map('map').setView(
-            [-32.849, 27.438],
-            13
-        );
-
-        L.tileLayer(
-            'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-            {
-                maxZoom: 19,
-                attribution: '&copy; OpenStreetMap contributors'
-            }
-        ).addTo(map);
-
-        L.marker([-32.849, 27.438])
-            .addTo(map)
-            .bindPopup(
-                "Lilitha's Nature Relief - Bisho, Eastern Cape area"
-            );
-
+        dateInput.min = southAfricanToday;
     }
 
+    // Validate and submit forms through FormSubmit's AJAX endpoint.
+    function setupAjaxForm(formId, feedbackId) {
+        const form = document.getElementById(formId);
+        const feedback = document.getElementById(feedbackId);
 
-    /* 8. FORM VALIDATION AND AJAX SUBMISSION */
-
-    const forms = document.querySelectorAll('.ajax-form');
-
-    forms.forEach(function (form) {
+        if (!form || !feedback) {
+            return;
+        }
 
         form.addEventListener('submit', async function (event) {
-
             event.preventDefault();
-
-            const feedback = form.querySelector('.form-feedback');
-            const submitButton = form.querySelector('[type="submit"]');
 
             feedback.textContent = '';
             feedback.className = 'form-feedback';
 
             if (!form.checkValidity()) {
-
                 form.reportValidity();
 
                 feedback.textContent =
-                    'Please correct the information in the form.';
+                    'Please complete all required fields and correct any invalid information.';
 
                 feedback.classList.add('error');
-
                 return;
-
             }
 
-            const phone = form.querySelector('[type="tel"]');
+            const phone = form.querySelector('input[type="tel"]');
 
             if (phone) {
+                const digits = phone.value.replace(/\D/g, '');
 
-                const phonePattern = /^\+?[0-9\s()-]{9,18}$/;
+                if (digits.length < 9 || digits.length > 12) {
+                    phone.setCustomValidity(
+                        'Enter a valid South African or international phone number.'
+                    );
 
-                if (!phonePattern.test(phone.value.trim())) {
-
-                    feedback.textContent =
-                        'Please enter a valid phone number.';
-
-                    feedback.classList.add('error');
-
-                    phone.focus();
-
+                    phone.reportValidity();
+                    phone.setCustomValidity('');
                     return;
-
                 }
-
             }
 
-            const honeypot = form.querySelector('[name="_honey"]');
+            const submitButton =
+                form.querySelector('button[type="submit"]');
 
-            if (honeypot && honeypot.value !== '') {
-                return;
+            const originalLabel = submitButton
+                ? submitButton.textContent
+                : '';
+
+            if (submitButton) {
+                submitButton.disabled = true;
+                submitButton.textContent = 'Sending...';
             }
-
-            const originalText = submitButton.textContent;
-
-            submitButton.disabled = true;
-            submitButton.textContent = 'Submitting...';
 
             try {
+                const data = Object.fromEntries(
+                    new FormData(form).entries()
+                );
 
-                const formData = new FormData(form);
+                const email = form.querySelector('input[type="email"]');
+
+                if (email) {
+                    data._replyto = email.value.trim();
+                }
 
                 const response = await fetch(form.action, {
-
                     method: 'POST',
-
                     headers: {
+                        'Content-Type': 'application/json',
                         'Accept': 'application/json'
                     },
-
-                    body: formData
-
+                    body: JSON.stringify(data)
                 });
 
-                if (!response.ok) {
-                    throw new Error('Form submission failed.');
+                const result = await response.json().catch(function () {
+                    return {};
+                });
+
+                if (
+                    !response.ok ||
+                    result.success === false ||
+                    result.success === 'false'
+                ) {
+                    throw new Error(
+                        result.message ||
+                        'The form service did not accept the submission.'
+                    );
                 }
-
-                const result = await response.json();
-
-                if (result.success === 'false' || result.success === false) {
-                    throw new Error('The form service did not accept the submission.');
-                }
-
-                feedback.textContent = form.dataset.successMessage;
-
-                feedback.classList.add('success');
-
-                form.reset();
-
-            } catch (error) {
 
                 feedback.textContent =
-                    'We could not submit your form online. Please try again or contact us by email.';
+                    formId === 'enquiry-form'
+                        ? 'Thank you. Your consultation request has been sent. We will contact you to discuss availability.'
+                        : 'Thank you. Your message has been sent successfully.';
+
+                feedback.classList.add('success');
+                form.reset();
+
+                if (dateInput) {
+                    dateInput.min = new Intl.DateTimeFormat('en-CA', {
+                        timeZone: 'Africa/Johannesburg',
+                        year: 'numeric',
+                        month: '2-digit',
+                        day: '2-digit'
+                    }).format(new Date());
+                }
+
+            } catch (error) {
+                feedback.textContent =
+                    'We could not confirm that your message was delivered. Please email makubaloliyakhanya@gmail.com directly. ' +
+                    error.message;
 
                 feedback.classList.add('error');
 
             } finally {
-
-                submitButton.disabled = false;
-                submitButton.textContent = originalText;
-
+                if (submitButton) {
+                    submitButton.disabled = false;
+                    submitButton.textContent = originalLabel;
+                }
             }
-
         });
+    }
 
-    });
+    setupAjaxForm('enquiry-form', 'enquiry-feedback');
+    setupAjaxForm('contact-form', 'contact-feedback');
 
+    // Leaflet map. The marker is an approximate point in Bisho.
+    const mapElement = document.getElementById('leaflet-map');
 
-    /* 9. DATE VALIDATION */
+    if (mapElement) {
+        if (window.L) {
+            const bisho = [-32.847, 27.442];
 
-    const dateInputs = document.querySelectorAll('input[type="date"]');
+            const map = L.map(mapElement).setView(bisho, 14);
 
-    const today = new Date();
+            L.tileLayer(
+                'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                {
+                    maxZoom: 19,
+                    attribution:
+                        '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                }
+            ).addTo(map);
 
-    const localToday = new Date(
-        today.getTime() - today.getTimezoneOffset() * 60000
-    ).toISOString().split('T')[0];
+            L.marker(bisho)
+                .addTo(map)
+                .bindPopup(
+                    '<strong>Lilitha\'s Nature Relief</strong><br>Approximate Bisho area'
+                )
+                .openPopup();
 
-    dateInputs.forEach(function (input) {
-        input.min = localToday;
-    });
+        } else {
+            mapElement.textContent =
+                'The interactive map could not load. Please check your internet connection.';
+        }
+    }
 
+    // Back-to-top button.
+    const backToTop = document.getElementById('back-to-top');
 
-    /* 10. ACTIVE NAVIGATION */
-
-    const currentPath = window.location.pathname;
-
-    document.querySelectorAll('.nav-links a').forEach(function (link) {
-
-        const linkPath = new URL(link.href).pathname;
-
-        if (linkPath === currentPath) {
-            link.classList.add('active');
-            link.setAttribute('aria-current', 'page');
+    if (backToTop) {
+        function updateBackToTop() {
+            backToTop.classList.toggle(
+                'visible',
+                window.scrollY > 350
+            );
         }
 
-    });
+        window.addEventListener(
+            'scroll',
+            updateBackToTop,
+            { passive: true }
+        );
+
+        updateBackToTop();
+
+        backToTop.addEventListener('click', function () {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
 
 });

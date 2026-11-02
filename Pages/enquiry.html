@@ -1,186 +1,159 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Enquiries | Lilitha's Nature Relief</title>
-
-    <meta name="description"
-          content="Make an enquiry about agricultural services, products and support opportunities offered by Lilitha's Nature Relief.">
-
-    <meta name="keywords"
-          content="agricultural service enquiry, soil testing enquiry, crop management enquiry, Lilitha's Nature Relief">
-
+    <title>Service Enquiry - Lilitha's Nature Relief</title>
+    <meta name="description" content="Enquire about agricultural services from Lilitha's Nature Relief. Share your service needs and preferred appointment date.">
+    <meta name="keywords" content="Lilitha's Nature Relief, agricultural support, farming services, soil testing, crop management, South Africa">
     <meta name="author" content="Lilitha's Nature Relief">
     <meta name="robots" content="index, follow">
-
-    <link rel="canonical"
-          href="https://liyakhanya-makubalo.github.io/my-website/Pages/enquiry.html">
-
+    <meta name="theme-color" content="#234d2c">
+    <meta property="og:site_name" content="Lilitha's Nature Relief">
+    <meta property="og:title" content="Service Enquiry - Lilitha's Nature Relief">
+    <meta property="og:description" content="Enquire about agricultural services from Lilitha's Nature Relief. Share your service needs and preferred appointment date.">
+    <meta property="og:type" content="website">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="canonical" href="https://liyakhanya-makubalo.github.io/my-website/Pages/enquiry.html">
+    <meta property="og:url" content="https://liyakhanya-makubalo.github.io/my-website/Pages/enquiry.html">
 </head>
 
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
-<header>
-    <h1>Lilitha's Nature Relief</h1>
+    <header>
+        <h1>Lilitha's Nature Relief</h1>
 
-    <button id="menu-toggle" aria-expanded="false"
-            aria-controls="main-navigation">Menu</button>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="consultation.html">Book Consultation</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="sitemap.html">Site Map</a></li>
+            </ul>
+        </nav>
 
-    <nav aria-label="Main navigation">
-        <ul class="nav-links" id="main-navigation">
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="consultation.html">Book Consultation</a></li>
-            <li><a href="enquiry.html">Enquiry</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="sitemap.html">Site Map</a></li>
-        </ul>
-    </nav>
-</header>
+        <div class="datetime-container" aria-label="Current South African date and time">
+            <span><strong>Date:</strong> <time id="current-date">Loading...</time></span>
+            <span><strong>Time:</strong> <time id="current-time">Loading...</time> SAST</span>
+        </div>
+    </header>
 
-<main>
+    <main id="main-content">
+        <section class="page-hero">
+            <h2>Book a Consultation</h2>
+            <p>
+                Tell us about your agricultural needs and request
+                a consultation.
+            </p>
+        </section>
 
-    <section class="page-hero">
-        <h2>Make an Enquiry</h2>
+        <section class="container">
+            <h2>Consultation Request</h2>
 
+            <p>
+                Please complete the form below. Providing accurate
+                information helps us understand the type of
+                agricultural support you require.
+            </p>
+
+            <form id="enquiry-form"
+                action="https://formsubmit.co/ajax/makubaloliyakhanya@gmail.com"
+                method="POST" novalidate>
+
+                <input type="hidden" name="_subject"
+                    value="New service enquiry - Lilitha's Nature Relief">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_captcha" value="true">
+
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname"
+                    minlength="2" maxlength="80" autocomplete="name"
+                    placeholder="Enter your full name" required>
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email"
+                    maxlength="120" autocomplete="email"
+                    placeholder="example@email.com" required>
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone"
+                    pattern="[+]?[0-9 ]{9,15}" minlength="9"
+                    maxlength="16" autocomplete="tel"
+                    placeholder="Enter your phone number" required>
+
+                <label for="consultation-type">Consultation Type</label>
+                <select id="consultation-type" name="consultation-type" required>
+                    <option value="">Choose a consultation</option>
+                    <option value="soil">Soil Testing</option>
+                    <option value="crop">Crop Management</option>
+                    <option value="greenhouse">Greenhouse Services</option>
+                    <option value="maintenance">Farm Maintenance</option>
+                    <option value="technology">Technology-Based Solutions</option>
+                    <option value="general">General Agricultural Consultation</option>
+                </select>
+
+                <label for="date">Preferred Date</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="time">Preferred Time</label>
+                <input type="time" id="time" name="time" required>
+
+                <label for="province">Province</label>
+                <select id="province" name="province" required>
+                    <option value="">Select province</option>
+                    <option value="eastern-cape">Eastern Cape</option>
+                    <option value="free-state">Free State</option>
+                    <option value="gauteng">Gauteng</option>
+                    <option value="kwazulu-natal">KwaZulu-Natal</option>
+                    <option value="limpopo">Limpopo</option>
+                    <option value="mpumalanga">Mpumalanga</option>
+                    <option value="northern-cape">Northern Cape</option>
+                    <option value="north-west">North West</option>
+                    <option value="western-cape">Western Cape</option>
+                </select>
+
+                <label for="needs">Agricultural Needs</label>
+                <textarea id="needs" name="needs"
+                    minlength="10" maxlength="1000" rows="6"
+                    placeholder="Please describe the agricultural support you require."
+                    required></textarea>
+
+                <label class="consent-label">
+                    <input type="checkbox" name="consent"
+                        id="enquiry-consent" required>
+                    I agree that my details may be used to respond to this enquiry.
+                </label>
+
+                <p class="form-note">
+                    After validation, your request is sent using the configured
+                    form service. The first submission may require email
+                    activation by the site owner.
+                </p>
+
+                <div class="form-feedback" id="enquiry-feedback"
+                    role="status" aria-live="polite"></div>
+
+                <button type="submit">Submit Consultation Request</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
         <p>
-            Contact Lilitha's Nature Relief to enquire about
-            our services and agricultural support.
+            &copy; 2026 Lilitha's Nature Relief.
+            All Rights Reserved.
         </p>
-    </section>
+    </footer>
 
-    <section class="container">
+    <script defer src="../js/script.js"></script>
 
-        <h2>Service and General Enquiries</h2>
-
-        <p>
-            Complete the form below to tell us what type of
-            agricultural service or support you are interested in.
-            We will review your request and respond with further
-            information about availability and costs where applicable.
-        </p>
-
-        <form class="ajax-form"
-              action="https://formsubmit.co/ajax/makubaloliyakhanya@gmail.com"
-              method="POST"
-              data-success-message="Thank you for your enquiry. Your request has been submitted. We will contact you with further information about your selected service, availability and costs where applicable.">
-
-            <input type="hidden" name="_subject"
-                   value="New Enquiry - Lilitha's Nature Relief">
-
-            <input type="hidden" name="_template" value="table">
-
-            <input type="text" name="_honey"
-                   style="display:none" tabindex="-1"
-                   autocomplete="off">
-
-            <label for="enquiry-name">Full Name</label>
-
-            <input type="text"
-                   id="enquiry-name"
-                   name="Full Name"
-                   minlength="3"
-                   maxlength="80"
-                   placeholder="Enter your full name"
-                   autocomplete="name"
-                   required>
-
-            <label for="enquiry-email">Email Address</label>
-
-            <input type="email"
-                   id="enquiry-email"
-                   name="Email Address"
-                   placeholder="example@email.com"
-                   autocomplete="email"
-                   required>
-
-            <label for="enquiry-phone">Phone Number</label>
-
-            <input type="tel"
-                   id="enquiry-phone"
-                   name="Phone Number"
-                   minlength="9"
-                   maxlength="18"
-                   placeholder="+27 00 000 0000"
-                   autocomplete="tel"
-                   required>
-
-            <label for="enquiry-type">Type of Enquiry</label>
-
-            <select id="enquiry-type"
-                    name="Type of Enquiry"
-                    required>
-
-                <option value="">Select enquiry type</option>
-                <option value="Service Enquiry">Service Enquiry</option>
-                <option value="Product Enquiry">Product Enquiry</option>
-                <option value="Volunteer Opportunity">Volunteer Opportunity</option>
-                <option value="Sponsorship Opportunity">Sponsorship Opportunity</option>
-                <option value="General Enquiry">General Enquiry</option>
-
-            </select>
-
-            <label for="service">Service of Interest</label>
-
-            <select id="service"
-                    name="Service of Interest"
-                    required>
-
-                <option value="">Select a service</option>
-                <option value="Soil Testing">Soil Testing</option>
-                <option value="Crop Management">Crop Management</option>
-                <option value="Greenhouse Services">Greenhouse Services</option>
-                <option value="Farm Maintenance">Farm Maintenance</option>
-                <option value="Agricultural Consultation">Agricultural Consultation</option>
-                <option value="Technology-Based Farming Solutions">Technology-Based Farming Solutions</option>
-                <option value="Other">Other</option>
-
-            </select>
-
-            <label for="enquiry-date">Preferred Date (if applicable)</label>
-
-            <input type="date"
-                   id="enquiry-date"
-                   name="Preferred Date">
-
-            <label for="enquiry-message">Additional Information</label>
-
-            <textarea id="enquiry-message"
-                      name="Additional Information"
-                      rows="6"
-                      minlength="10"
-                      maxlength="1000"
-                      placeholder="Tell us more about your enquiry."
-                      required></textarea>
-
-            <p class="form-feedback"
-               aria-live="polite"></p>
-
-            <button type="submit">
-                Submit Enquiry
-            </button>
-
-        </form>
-
-    </section>
-
-</main>
-
-<footer>
-    <p>
-        &copy; <span data-year>2026</span>
-        Lilitha's Nature Relief. All Rights Reserved.
-    </p>
-</footer>
-
-<script src="../js/script.js"></script>
-
+    <button type="button" id="back-to-top" class="back-to-top"
+        aria-label="Back to top" title="Back to top">↑</button>
 </body>
 </html>
+
