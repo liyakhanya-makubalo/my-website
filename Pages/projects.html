@@ -1,169 +1,113 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Projects - Lilitha's Nature Relief</title>
-    <meta name="description" content="View agricultural projects covering smart irrigation, drone crop monitoring, soil testing and greenhouse management.">
-    <meta name="keywords" content="Lilitha's Nature Relief, agricultural support, farming services, soil testing, crop management, South Africa">
-    <meta name="author" content="Lilitha's Nature Relief">
-    <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#234d2c">
-    <meta property="og:site_name" content="Lilitha's Nature Relief">
-    <meta property="og:title" content="Projects - Lilitha's Nature Relief">
-    <meta property="og:description" content="View agricultural projects covering smart irrigation, drone crop monitoring, soil testing and greenhouse management.">
-    <meta property="og:type" content="website">
-    <link rel="stylesheet" href="../css/style.css">
+    <meta name="description" content="View projects and images from Lilitha's Nature Relief.">
     <link rel="canonical" href="https://liyakhanya-makubalo.github.io/my-website/Pages/projects.html">
-    <meta property="og:url" content="https://liyakhanya-makubalo.github.io/my-website/Pages/projects.html">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/script.js" defer></script>
 </head>
-
 <body>
-    <a class="skip-link" href="#main-content">Skip to main content</a>
 
-    <header>
+<a class="skip-link" href="#main-content">Skip to content</a>
+
+<header>
+    <div class="header-content">
         <h1>Lilitha's Nature Relief</h1>
+    </div>
+    <nav aria-label="Main navigation">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="projects.html" class="active">Projects</a></li>
+            <li><a href="consultation.html">Book Consultation</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="sitemap.html">Site Map</a></li>
+        </ul>
+    </nav>
+</header>
 
-        <nav aria-label="Main navigation">
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="projects.html" class="active">Projects</a></li>
-                <li><a href="consultation.html">Book Consultation</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="sitemap.html">Site Map</a></li>
-            </ul>
-        </nav>
+<main id="main-content">
 
-        <div class="datetime-container" aria-label="Current South African date and time">
-            <span><strong>Date:</strong> <time id="current-date">Loading...</time></span>
-            <span><strong>Time:</strong> <time id="current-time">Loading...</time> SAST</span>
+    <section class="page-hero">
+        <h2>Our Projects</h2>
+        <p>Explore our project gallery.</p>
+    </section>
+
+    <section class="container">
+
+        <div class="search-area">
+            <label for="content-search">Search projects</label>
+            <input type="search" id="content-search"
+                   placeholder="Search the gallery...">
+            <p id="search-count" aria-live="polite"></p>
         </div>
-    </header>
 
-    <main id="main-content">
-        <section class="page-hero">
-            <h2>Our Projects</h2>
-            <p>Examples of agricultural support project areas.</p>
-        </section>
+        <div class="searchable-grid">
 
-        <section class="container">
-            <h2>Project Areas</h2>
+            <article class="card">
+                <img src="../Assets/images/plant health.avif" alt="Plant health project">
+                <div class="card-content">
+                    <h3>Plant Health</h3>
+                    <p>Plant health monitoring and care.</p>
+                </div>
+            </article>
 
-            <div class="search-tools">
-                <label for="content-search">Search projects</label>
-                <input type="search" id="content-search"
-                    placeholder="Search projects..."
-                    aria-describedby="search-help">
+            <article class="card">
+                <img src="../Assets/images/2019_0228_1.jpg" alt="Nature project">
+                <div class="card-content">
+                    <h3>Nature Project</h3>
+                    <p>Project activities and development.</p>
+                </div>
+            </article>
 
-                <p id="search-help" class="small-note">
-                    Type to filter the items displayed below.
-                </p>
-
-                <p id="search-count" class="search-status"
-                    aria-live="polite"></p>
-            </div>
-
-            <p>
-                The following project areas demonstrate the types
-                of agricultural support that Lilitha's Nature Relief
-                focuses on.
-            </p>
-
-            <div class="grid searchable-grid">
-                <article class="card">
-                    <img loading="lazy" decoding="async"
-                        src="../Assets/images/smart irrigation.png"
-                        alt="Agricultural irrigation system">
-
-                    <h3>Smart Irrigation</h3>
-                    <p>
-                        Smart irrigation uses technology-based approaches
-                        to support water management. The purpose is to help
-                        agricultural businesses plan water use more effectively.
-                    </p>
-                </article>
-
-                <article class="card">
-                    <img loading="lazy" decoding="async"
-                        src="../Assets/images/Drone crop.avif"
-                        alt="Drone used for agricultural monitoring">
-
-                    <h3>Drone Crop Monitoring</h3>
-                    <p>
-                        Drone technology can assist with observing crop
-                        conditions over agricultural areas. Monitoring
-                        information can help identify areas that may
-                        require attention.
-                    </p>
-                </article>
-
-                <article class="card">
-                    <img loading="lazy" decoding="async"
-                        src="../Assets/images/soil testing.jpg"
-                        alt="Soil prepared for testing">
-
+            <article class="card">
+                <img src="../Assets/images/soil testing.jpg" alt="Soil testing project">
+                <div class="card-content">
                     <h3>Soil Testing</h3>
-                    <p>
-                        Soil testing provides information about soil
-                        conditions and can support agricultural planning
-                        and decision-making.
-                    </p>
-                </article>
+                    <p>Soil assessment and testing activities.</p>
+                </div>
+            </article>
 
-                <article class="card">
-                    <img loading="lazy" decoding="async"
-                        src="../Assets/images/greenhouse.jpg"
-                        alt="Greenhouse used for agricultural activities">
+            <article class="card">
+                <img src="../Assets/images/smart irrigation.png" alt="Smart irrigation project">
+                <div class="card-content">
+                    <h3>Smart Irrigation</h3>
+                    <p>Water management and irrigation activities.</p>
+                </div>
+            </article>
 
-                    <h3>Greenhouse Management</h3>
-                    <p>
-                        Greenhouse management supports agricultural
-                        activities carried out in controlled environments.
-                    </p>
-                </article>
+            <article class="card">
+                <img src="../Assets/images/greenhouse.jpg" alt="Greenhouse project">
+                <div class="card-content">
+                    <h3>Greenhouse</h3>
+                    <p>Greenhouse management activities.</p>
+                </div>
+            </article>
 
-                <article class="card">
-                    <img loading="lazy" decoding="async"
-                        src="../Assets/images/plant health.avif"
-                        alt="Plant health used for agricultural activities">
+            <article class="card">
+                <img src="../Assets/images/Drone crop.avif" alt="Drone project">
+                <div class="card-content">
+                    <h3>Drone Inspection</h3>
+                    <p>Monitoring using drone technology.</p>
+                </div>
+            </article>
 
-                    <h3>Crop Health Monitoring</h3>
-                    <p>
-                        Crop health monitoring focuses on observing crops
-                        and identifying possible problems at an early stage.
-                    </p>
-                </article>
+        </div>
 
-                <article class="card">
-                    <img loading="lazy" decoding="async"
-                        src="../Assets/images/2019_0228_1.jpg"
-                        alt="Small farming agricultural activities">
+    </section>
 
-                    <h3>Small-Scale Farmer Support</h3>
-                    <p>
-                        Small-scale agricultural businesses may require
-                        practical and affordable support. Consultation
-                        allows clients to explain their specific needs.
-                    </p>
-                </article>
-            </div>
-        </section>
-    </main>
+</main>
 
-    <footer>
-        <p>
-            &copy; 2026 Lilitha's Nature Relief.
-            All Rights Reserved.
-        </p>
-    </footer>
+<footer>
+    <p>&copy; 2026 Lilitha's Nature Relief. All Rights Reserved.</p>
+</footer>
 
-    <script defer src="../js/script.js"></script>
-
-    <button type="button" id="back-to-top" class="back-to-top"
-        aria-label="Back to top" title="Back to top">↑</button>
 </body>
 </html>
+
 

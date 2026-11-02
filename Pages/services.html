@@ -1,195 +1,97 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Services - Lilitha's Nature Relief</title>
-    <meta name="description" content="Explore soil testing, crop management, greenhouse services, farm maintenance and technology-based farming solutions.">
-    <meta name="keywords" content="Lilitha's Nature Relief, agricultural support, farming services, soil testing, crop management, South Africa">
-    <meta name="author" content="Lilitha's Nature Relief">
-    <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#234d2c">
-    <meta property="og:site_name" content="Lilitha's Nature Relief">
-    <meta property="og:title" content="Services - Lilitha's Nature Relief">
-    <meta property="og:description" content="Explore soil testing, crop management, greenhouse services, farm maintenance and technology-based farming solutions.">
-    <meta property="og:type" content="website">
-    <link rel="stylesheet" href="../css/style.css">
+    <meta name="description" content="Explore the services offered by Lilitha's Nature Relief.">
     <link rel="canonical" href="https://liyakhanya-makubalo.github.io/my-website/Pages/services.html">
-    <meta property="og:url" content="https://liyakhanya-makubalo.github.io/my-website/Pages/services.html">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/script.js" defer></script>
 </head>
-
 <body>
-    <a class="skip-link" href="#main-content">Skip to main content</a>
 
-    <header>
+<a class="skip-link" href="#main-content">Skip to content</a>
+
+<header>
+    <div class="header-content">
         <h1>Lilitha's Nature Relief</h1>
+    </div>
+    <nav aria-label="Main navigation">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html" class="active">Services</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="consultation.html">Book Consultation</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="sitemap.html">Site Map</a></li>
+        </ul>
+    </nav>
+</header>
 
-        <nav aria-label="Main navigation">
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html" class="active">Services</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="consultation.html">Book Consultation</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="sitemap.html">Site Map</a></li>
-            </ul>
-        </nav>
+<main id="main-content">
 
-        <div class="datetime-container" aria-label="Current South African date and time">
-            <span><strong>Date:</strong> <time id="current-date">Loading...</time></span>
-            <span><strong>Time:</strong> <time id="current-time">Loading...</time> SAST</span>
+    <section class="page-hero">
+        <h2>Our Services</h2>
+        <p>Explore the services available through Lilitha's Nature Relief.</p>
+    </section>
+
+    <section class="container">
+
+        <div class="search-area">
+            <label for="content-search">Search our services</label>
+            <input type="search" id="content-search"
+                   placeholder="Type to search...">
+            <p id="search-count" aria-live="polite"></p>
         </div>
-    </header>
 
-    <main id="main-content">
-        <section class="page-hero">
-            <h2>Our Services</h2>
-            <p>
-                Practical and technology-based solutions for farmers
-                and agricultural businesses.
-            </p>
-        </section>
+        <div class="searchable-grid">
 
-        <section class="container">
-            <h2>Agricultural Support Services</h2>
-
-            <div class="search-tools">
-                <label for="content-search">Search services</label>
-                <input type="search" id="content-search"
-                    placeholder="Search services..."
-                    aria-describedby="search-help">
-
-                <p id="search-help" class="small-note">
-                    Type to filter the items displayed below.
-                </p>
-
-                <p id="search-count" class="search-status"
-                    aria-live="polite"></p>
-            </div>
-
-            <p>
-                Lilitha's Nature Relief provides several services designed
-                to support agricultural activities. Each service addresses
-                a different agricultural need and can be discussed during
-                a consultation.
-            </p>
-
-            <div class="grid searchable-grid">
-                <article class="card">
+            <article class="card">
+                <img src="../Assets/images/soil testing.jpg" alt="Soil testing">
+                <div class="card-content">
                     <h3>Soil Testing</h3>
-                    <p>
-                        Soil testing provides information about soil conditions.
-                        This information can help agricultural businesses
-                        understand their soil and make better-informed
-                        decisions when planning agricultural activities.
-                    </p>
-                </article>
+                    <p>Learn about soil conditions and the importance of soil testing.</p>
+                </div>
+            </article>
 
-                <article class="card">
-                    <h3>Crop Management</h3>
-                    <p>
-                        Crop management support focuses on monitoring crop
-                        conditions and providing practical guidance on crop
-                        care. Early identification of crop problems can help
-                        agricultural businesses respond to issues.
-                    </p>
-                </article>
+            <article class="card">
+                <img src="../Assets/images/smart irrigation.png" alt="Irrigation system">
+                <div class="card-content">
+                    <h3>Smart Irrigation</h3>
+                    <p>Explore ways of managing water through irrigation planning.</p>
+                </div>
+            </article>
 
-                <article class="card">
-                    <h3>Greenhouse Services</h3>
-                    <p>
-                        Greenhouse services provide support for controlled
-                        agricultural environments. Assistance may include
-                        greenhouse management and planning of activities
-                        within the growing environment.
-                    </p>
-                </article>
+            <article class="card">
+                <img src="../Assets/images/greenhouse.jpg" alt="Greenhouse">
+                <div class="card-content">
+                    <h3>Greenhouse Management</h3>
+                    <p>Discover greenhouse management and monitoring.</p>
+                </div>
+            </article>
 
-                <article class="card">
-                    <h3>Farm Maintenance</h3>
-                    <p>
-                        Farm maintenance support focuses on keeping
-                        agricultural facilities and working areas in
-                        suitable condition for daily activities.
-                    </p>
-                </article>
+            <article class="card">
+                <img src="../Assets/images/Drone crop.avif" alt="Drone inspection">
+                <div class="card-content">
+                    <h3>Drone Inspections</h3>
+                    <p>Explore how drone inspections can support monitoring.</p>
+                </div>
+            </article>
 
-                <article class="card">
-                    <h3>Agricultural Consultation</h3>
-                    <p>
-                        Agricultural consultations allow clients to discuss
-                        their specific agricultural needs and receive
-                        practical guidance about possible solutions.
-                    </p>
-                </article>
+        </div>
 
-                <article class="card">
-                    <h3>Technology-Based Farming Solutions</h3>
-                    <p>
-                        Technology-based solutions can support agricultural
-                        activities through tools such as monitoring
-                        technologies, digital information and other
-                        technology-assisted approaches.
-                    </p>
-                </article>
-            </div>
+    </section>
 
-            <div class="call-to-action">
-                <h2>Need Agricultural Support?</h2>
-                <p>
-                    Complete our consultation form and tell us about
-                    the agricultural service you require.
-                </p>
-                <a class="button" href="consultation.html">
-                    Book a consultation
-                </a>
-            </div>
-        </section>
+</main>
 
-        <section class="container faq-section">
-            <h2>Frequently Asked Questions</h2>
+<footer>
+    <p>&copy; 2026 Lilitha's Nature Relief. All Rights Reserved.</p>
+</footer>
 
-            <details class="faq-item">
-                <summary>How can I request one of the services?</summary>
-                <p>
-                    Use the Book a Consultation page and complete the
-                    enquiry form with the service you are interested in.
-                </p>
-            </details>
-
-            <details class="faq-item">
-                <summary>Which areas do you serve?</summary>
-                <p>
-                    The organisation's listed operating areas include
-                    the Eastern Cape and Gauteng. Contact the organisation
-                    to discuss your location.
-                </p>
-            </details>
-
-            <details class="faq-item">
-                <summary>How will I know whether my preferred consultation time is available?</summary>
-                <p>
-                    Submit your preferred date and time. The organisation
-                    will review the request and contact you to confirm
-                    availability.
-                </p>
-            </details>
-        </section>
-    </main>
-
-    <footer>
-        <p>
-            &copy; 2026 Lilitha's Nature Relief.
-            All Rights Reserved.
-        </p>
-    </footer>
-
-    <script defer src="../js/script.js"></script>
-
-    <button type="button" id="back-to-top" class="back-to-top"
-        aria-label="Back to top" title="Back to top">↑</button>
 </body>
 </html>
+
 
