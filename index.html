@@ -1,151 +1,196 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <!-- Defines the character encoding used by the website -->
     <meta charset="UTF-8">
-
-    <!-- Makes the website responsive on phones, tablets and computers -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Home - Lilitha's Nature Relief</title>
+    <title>Home | Lilitha's Nature Relief</title>
 
-    <!-- Connects the homepage to the external CSS stylesheet -->
+    <meta name="description"
+          content="Discover Lilitha's Nature Relief, a South African agricultural support organisation offering soil testing, crop management, greenhouse services and agricultural consultation.">
+
+    <meta name="keywords"
+          content="Lilitha's Nature Relief, South African agriculture, soil testing, crop management, greenhouse services, agricultural consultation">
+
+    <meta name="author" content="Lilitha's Nature Relief">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#234d2c">
+
+    <link rel="canonical"
+          href="https://liyakhanya-makubalo.github.io/my-website/">
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <!-- Website header containing the organisation name and navigation -->
-    <header>
+<header>
+    <h1>Lilitha's Nature Relief</h1>
 
-        <h1>Lilitha's Nature Relief</h1>
+    <button id="menu-toggle"
+            aria-expanded="false"
+            aria-controls="main-navigation">
+        Menu
+    </button>
 
-        <!-- Main navigation menu -->
-        <nav aria-label="Main navigation">
-            <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="Pages/about.html">About Us</a></li>
-                <li><a href="Pages/services.html">Services</a></li>
-                <li><a href="Pages/projects.html">Projects</a></li>
-                <li><a href="Pages/consultation.html">Book Consultation</a></li>
-                <li><a href="Pages/contact.html">Contact</a></li>
-                <li><a href="Pages/sitemap.html">Site Map</a></li>
-            </ul>
-        </nav>
+    <nav aria-label="Main navigation">
+        <ul class="nav-links" id="main-navigation">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Pages/about.html">About Us</a></li>
+            <li><a href="Pages/services.html">Services</a></li>
+            <li><a href="Pages/projects.html">Projects</a></li>
+            <li><a href="Pages/consultation.html">Book Consultation</a></li>
+            <li><a href="Pages/enquiry.html">Enquiry</a></li>
+            <li><a href="Pages/contact.html">Contact</a></li>
+            <li><a href="Pages/sitemap.html">Site Map</a></li>
+        </ul>
+    </nav>
+</header>
 
-    </header>
+<main>
 
-    <!-- Main content of the homepage -->
-    <main>
-        <img src="./Assets/images/homepage.jpg" alt="Homepage image" class="homepage-image">
+    <img src="Assets/images/homepage.jpg"
+         alt="Agricultural landscape representing Lilitha's Nature Relief"
+         class="homepage-image">
 
-        <!-- Hero section introduces the organisation -->
-        <section class="hero">
+    <section class="hero">
+        <div class="hero-content">
 
-            <div class="hero-content">
-
-                <h2>Smart Farming Solutions for a Better Future</h2>
-
-                <p>
-                    Lilitha's Nature Relief provides practical and technology-based
-                    solutions to support farmers and agricultural businesses.
-                </p>
-
-                <p>
-                    Our services focus on improving agricultural planning,
-                    supporting crop management and helping agricultural businesses
-                    make informed decisions.
-                </p>
-
-                <a class="button" href="Pages/consultation.html">
-                    Book a Consultation
-                </a>
-
-            </div>
-
-        </section>
-
-       
-
-        <!-- Introduction section -->
-        <section class="container">
-
-            <h2>Welcome to Lilitha's Nature Relief</h2>
+            <h2>Smart Farming Solutions for a Better Future</h2>
 
             <p>
-                Lilitha's Nature Relief is a South African agricultural support
-                organisation that provides practical services to farmers,
-                small-scale agricultural businesses and other agricultural
-                organisations.
+                Lilitha's Nature Relief provides practical and technology-based
+                solutions to support farmers and agricultural businesses.
             </p>
 
             <p>
-                The organisation combines practical agricultural support with
-                technology-based approaches. This allows clients to receive
-                assistance with areas such as soil testing, crop management,
-                greenhouse services, farm maintenance and agricultural
-                consultation.
+                Our services focus on improving agricultural planning,
+                supporting crop management and helping agricultural businesses
+                make informed decisions.
             </p>
 
-        </section>
+            <a class="button" href="Pages/consultation.html">
+                Book a Consultation
+            </a>
 
-        <!-- Main services preview -->
-        <section class="container">
+        </div>
+    </section>
 
-            <h2>Our Main Services</h2>
+    <section class="container">
 
-            <div class="grid">
-
-                <article class="card">
-                    <h3>Soil Testing</h3>
-                    <p>
-                        Support with understanding soil conditions and using
-                        soil information for agricultural planning.
-                    </p>
-                </article>
-
-                <article class="card">
-                    <h3>Crop Management</h3>
-                    <p>
-                        Practical support for monitoring crop conditions
-                        and improving crop care.
-                    </p>
-                </article>
-
-                <article class="card">
-                    <h3>Greenhouse Services</h3>
-                    <p>
-                        Support for agricultural activities carried out
-                        in controlled greenhouse environments.
-                    </p>
-                </article>
-
-            </div>
-
-            <p class="center-text">
-                <a class="button" href="Pages/services.html">
-                    View All Services
-                </a>
-            </p>
-
-        </section>
-
-    </main>
-
-    <!-- Website footer -->
-    <footer>
+        <h2>Welcome to Lilitha's Nature Relief</h2>
 
         <p>
-            &copy; 2026 Lilitha's Nature Relief.
-            All Rights Reserved.
+            Lilitha's Nature Relief is a South African agricultural support
+            organisation that provides practical services to farmers,
+            small-scale agricultural businesses and other agricultural
+            organisations.
         </p>
 
-    </footer>
+        <p>
+            The organisation combines practical agricultural support with
+            technology-based approaches. This allows clients to receive
+            assistance with areas such as soil testing, crop management,
+            greenhouse services, farm maintenance and agricultural
+            consultation.
+        </p>
 
-    <!-- Connects the page to the JavaScript file -->
-    <script src="js/script.js"></script>
+    </section>
+
+    <section class="container">
+
+        <h2>Our Main Services</h2>
+
+        <div class="grid">
+
+            <article class="card">
+                <h3>Soil Testing</h3>
+                <p>
+                    Support with understanding soil conditions and using
+                    soil information for agricultural planning.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>Crop Management</h3>
+                <p>
+                    Practical support for monitoring crop conditions
+                    and improving crop care.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>Greenhouse Services</h3>
+                <p>
+                    Support for agricultural activities carried out
+                    in controlled greenhouse environments.
+                </p>
+            </article>
+
+        </div>
+
+        <p class="center-text">
+            <a class="button" href="Pages/services.html">
+                View All Services
+            </a>
+        </p>
+
+    </section>
+
+    <section class="container">
+
+        <h2>Frequently Asked Questions</h2>
+
+        <button class="accordion-button"
+                aria-expanded="false">
+            What services do you offer?
+        </button>
+
+        <div class="accordion-content" hidden>
+            <p>
+                We offer soil testing, crop management, greenhouse services,
+                farm maintenance and agricultural consultation.
+            </p>
+        </div>
+
+        <button class="accordion-button"
+                aria-expanded="false">
+            Which areas do you operate in?
+        </button>
+
+        <div class="accordion-content" hidden>
+            <p>
+                Our organisation provides services in areas including
+                the Eastern Cape and Gauteng, South Africa.
+            </p>
+        </div>
+
+        <button class="accordion-button"
+                aria-expanded="false">
+            How can I book a consultation?
+        </button>
+
+        <div class="accordion-content" hidden>
+            <p>
+                Visit our Book Consultation page and complete the
+                consultation request form.
+            </p>
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    <p>
+        &copy; <span data-year>2026</span>
+        Lilitha's Nature Relief. All Rights Reserved.
+    </p>
+</footer>
+
+<script src="js/script.js"></script>
 
 </body>
-
 </html>

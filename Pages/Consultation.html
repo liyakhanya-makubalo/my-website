@@ -1,274 +1,196 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-
-    <!-- Character encoding -->
     <meta charset="UTF-8">
-
-    <!-- Responsive viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Book Consultation - Lilitha's Nature Relief</title>
+    <title>Book Consultation | Lilitha's Nature Relief</title>
+
+    <meta name="description"
+          content="Request an agricultural consultation with Lilitha's Nature Relief. Provide your contact details, preferred date and agricultural requirements.">
+
+    <meta name="keywords"
+          content="book agricultural consultation, agricultural support South Africa, farming consultation">
+
+    <meta name="author" content="Lilitha's Nature Relief">
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical"
+          href="https://liyakhanya-makubalo.github.io/my-website/Pages/consultation.html">
 
     <link rel="stylesheet" href="../css/style.css">
-
 </head>
 
 <body>
 
-    <!-- Website header -->
-    <header>
-
-        <h1>Lilitha's Nature Relief</h1>
-
-        <!-- Main navigation -->
-        <nav aria-label="Main navigation">
-
-            <ul>
-
-                <li>
-                    <a href="../index.html">Home</a>
-                </li>
-
-                <li>
-                    <a href="about.html">About Us</a>
-                </li>
-
-                <li>
-                    <a href="services.html">Services</a>
-                </li>
-
-                <li>
-                    <a href="projects.html">Projects</a>
-                </li>
-
-                <li>
-                    <a href="consultation.html" class="active">
-                        Book Consultation
-                    </a>
-                </li>
-
-                <li>
-                    <a href="contact.html">Contact</a>
-                </li>
-
-                <li>
-                    <a href="sitemap.html">Site Map</a>
-                </li>
-
-            </ul>
-
-        </nav>
-
-    </header>
-
-
-    <main>
-
-        <!-- Consultation page introduction -->
-        <section class="page-hero">
-
-            <h2>Book a Consultation</h2>
-
-            <p>
-                Tell us about your agricultural needs and request
-                a consultation.
-            </p>
-
-        </section>
-
-
-        <section class="container">
-
-            <h2>Consultation Request</h2>
-
-            <p>
-                Please complete the form below. Providing accurate
-                information helps us understand the type of
-                agricultural support you require.
-            </p>
-
-
-            <!-- Consultation form -->
-            <form action="#" method="post">
-
-                <label for="fullname">
-                    Full Name
-                </label>
-
-                <input type="text"
-                       id="fullname"
-                       name="fullname"
-                       placeholder="Enter your full name"
-                       required>
-
-
-                <label for="email">
-                    Email Address
-                </label>
-
-                <input type="email"
-                       id="email"
-                       name="email"
-                       placeholder="example@email.com"
-                       required>
-
-
-                <label for="phone">
-                    Phone Number
-                </label>
-
-                <input type="tel"
-                       id="phone"
-                       name="phone"
-                       placeholder="Enter your phone number"
-                       required>
-
-
-                <label for="consultation-type">
-                    Consultation Type
-                </label>
-
-                <select id="consultation-type"
-                        name="consultation-type"
-                        required>
-
-                    <option value="">
-                        Choose a consultation
-                    </option>
-
-                    <option value="soil">
-                        Soil Testing
-                    </option>
-
-                    <option value="crop">
-                        Crop Management
-                    </option>
-
-                    <option value="greenhouse">
-                        Greenhouse Services
-                    </option>
-
-                    <option value="maintenance">
-                        Farm Maintenance
-                    </option>
-
-                    <option value="technology">
-                        Technology-Based Solutions
-                    </option>
-
-                    <option value="general">
-                        General Agricultural Consultation
-                    </option>
-
-                </select>
-
-
-                <label for="date">
-                    Preferred Date
-                </label>
-
-                <input type="date"
-                       id="date"
-                       name="date"
-                       required>
-
-
-                <label for="time">
-                    Preferred Time
-                </label>
-
-                <input type="time"
-                       id="time"
-                       name="time"
-                       required>
-
-
-                <label for="province">
-                    Province
-                </label>
-
-                <select id="province"
-                        name="province"
-                        required>
-
-                    <option value="">
-                        Select province
-                    </option>
-
-                    <option value="eastern-cape">
-                        Eastern Cape
-                    </option>
-
-                    <option value="free-state">
-                        Free State
-                    </option>
-
-                    <option value="gauteng">
-                        Gauteng
-                    </option>
-
-                    <option value="kwazulu-natal">
-                        KwaZulu-Natal
-                    </option>
-
-                    <option value="limpopo">
-                        Limpopo
-                    </option>
-
-                    <option value="mpumalanga">
-                        Mpumalanga
-                    </option>
-
-                    <option value="northern-cape">
-                        Northern Cape
-                    </option>
-
-                    <option value="north-west">
-                        North West
-                    </option>
-
-                    <option value="western-cape">
-                        Western Cape
-                    </option>
-
-                </select>
-
-
-                <label for="needs">
-                    Agricultural Needs
-                </label>
-
-                <textarea id="needs"
-                          name="needs"
-                          rows="6"
-                          placeholder="Please describe the agricultural support you require."
-                          required></textarea>
-
-
-                <!-- Submits the form -->
-                <button type="submit">
-                    Submit Consultation Request
-                </button>
-
-            </form>
-
-        </section>
-
-    </main>
-
-
-    <!-- Website footer -->
-    <footer>
+<header>
+    <h1>Lilitha's Nature Relief</h1>
+
+    <button id="menu-toggle" aria-expanded="false"
+            aria-controls="main-navigation">Menu</button>
+
+    <nav aria-label="Main navigation">
+        <ul class="nav-links" id="main-navigation">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="consultation.html">Book Consultation</a></li>
+            <li><a href="enquiry.html">Enquiry</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="sitemap.html">Site Map</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <section class="page-hero">
+        <h2>Book a Consultation</h2>
 
         <p>
-            &copy; 2026 Lilitha's Nature Relief.
-            All Rights Reserved.
+            Tell us about your agricultural needs and request
+            a consultation.
+        </p>
+    </section>
+
+    <section class="container">
+
+        <h2>Consultation Request</h2>
+
+        <p>
+            Please complete the form below. Providing accurate
+            information helps us understand the type of
+            agricultural support you require.
         </p>
 
-    </footer>
+        <form class="ajax-form"
+              action="https://formsubmit.co/ajax/makubaloliyakhanya@gmail.com"
+              method="POST"
+              data-success-message="Thank you! Your consultation request has been submitted. We will contact you to discuss availability.">
+
+            <input type="hidden" name="_subject"
+                   value="New Consultation Request - Lilitha's Nature Relief">
+
+            <input type="hidden" name="_template" value="table">
+
+            <input type="text" name="_honey"
+                   style="display:none" tabindex="-1"
+                   autocomplete="off">
+
+            <label for="fullname">Full Name</label>
+
+            <input type="text"
+                   id="fullname"
+                   name="Full Name"
+                   placeholder="Enter your full name"
+                   minlength="3"
+                   maxlength="80"
+                   autocomplete="name"
+                   required>
+
+            <label for="email">Email Address</label>
+
+            <input type="email"
+                   id="email"
+                   name="Email"
+                   placeholder="example@email.com"
+                   autocomplete="email"
+                   required>
+
+            <label for="phone">Phone Number</label>
+
+            <input type="tel"
+                   id="phone"
+                   name="Phone Number"
+                   placeholder="+27 00 000 0000"
+                   minlength="9"
+                   maxlength="18"
+                   autocomplete="tel"
+                   required>
+
+            <label for="consultation-type">Consultation Type</label>
+
+            <select id="consultation-type"
+                    name="Consultation Type"
+                    required>
+
+                <option value="">Choose a consultation</option>
+                <option value="Soil Testing">Soil Testing</option>
+                <option value="Crop Management">Crop Management</option>
+                <option value="Greenhouse Services">Greenhouse Services</option>
+                <option value="Farm Maintenance">Farm Maintenance</option>
+                <option value="Technology-Based Solutions">Technology-Based Solutions</option>
+                <option value="General Agricultural Consultation">General Agricultural Consultation</option>
+
+            </select>
+
+            <label for="date">Preferred Date</label>
+
+            <input type="date"
+                   id="date"
+                   name="Preferred Date"
+                   required>
+
+            <label for="time">Preferred Time</label>
+
+            <input type="time"
+                   id="time"
+                   name="Preferred Time"
+                   required>
+
+            <label for="province">Province</label>
+
+            <select id="province"
+                    name="Province"
+                    required>
+
+                <option value="">Select province</option>
+                <option value="Eastern Cape">Eastern Cape</option>
+                <option value="Free State">Free State</option>
+                <option value="Gauteng">Gauteng</option>
+                <option value="KwaZulu-Natal">KwaZulu-Natal</option>
+                <option value="Limpopo">Limpopo</option>
+                <option value="Mpumalanga">Mpumalanga</option>
+                <option value="Northern Cape">Northern Cape</option>
+                <option value="North West">North West</option>
+                <option value="Western Cape">Western Cape</option>
+
+            </select>
+
+            <label for="needs">Agricultural Needs</label>
+
+            <textarea id="needs"
+                      name="Agricultural Needs"
+                      rows="6"
+                      minlength="10"
+                      maxlength="1000"
+                      placeholder="Please describe the agricultural support you require."
+                      required></textarea>
+
+            <p class="form-feedback"
+               aria-live="polite"></p>
+
+            <button type="submit">
+                Submit Consultation Request
+            </button>
+
+        </form>
+
+    </section>
+
+</main>
+
+<footer>
+    <p>
+        &copy; <span data-year>2026</span>
+        Lilitha's Nature Relief. All Rights Reserved.
+    </p>
+</footer>
+
+<script src="../js/script.js"></script>
 
 </body>
-
 </html>

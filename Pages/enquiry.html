@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Enquiries | Lilitha's Nature Relief</title>
+
+    <meta name="description"
+          content="Make an enquiry about agricultural services, products and support opportunities offered by Lilitha's Nature Relief.">
+
+    <meta name="keywords"
+          content="agricultural service enquiry, soil testing enquiry, crop management enquiry, Lilitha's Nature Relief">
+
+    <meta name="author" content="Lilitha's Nature Relief">
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical"
+          href="https://liyakhanya-makubalo.github.io/my-website/Pages/enquiry.html">
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Lilitha's Nature Relief</h1>
+
+    <button id="menu-toggle" aria-expanded="false"
+            aria-controls="main-navigation">Menu</button>
+
+    <nav aria-label="Main navigation">
+        <ul class="nav-links" id="main-navigation">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="consultation.html">Book Consultation</a></li>
+            <li><a href="enquiry.html">Enquiry</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="sitemap.html">Site Map</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <section class="page-hero">
+        <h2>Make an Enquiry</h2>
+
+        <p>
+            Contact Lilitha's Nature Relief to enquire about
+            our services and agricultural support.
+        </p>
+    </section>
+
+    <section class="container">
+
+        <h2>Service and General Enquiries</h2>
+
+        <p>
+            Complete the form below to tell us what type of
+            agricultural service or support you are interested in.
+            We will review your request and respond with further
+            information about availability and costs where applicable.
+        </p>
+
+        <form class="ajax-form"
+              action="https://formsubmit.co/ajax/makubaloliyakhanya@gmail.com"
+              method="POST"
+              data-success-message="Thank you for your enquiry. Your request has been submitted. We will contact you with further information about your selected service, availability and costs where applicable.">
+
+            <input type="hidden" name="_subject"
+                   value="New Enquiry - Lilitha's Nature Relief">
+
+            <input type="hidden" name="_template" value="table">
+
+            <input type="text" name="_honey"
+                   style="display:none" tabindex="-1"
+                   autocomplete="off">
+
+            <label for="enquiry-name">Full Name</label>
+
+            <input type="text"
+                   id="enquiry-name"
+                   name="Full Name"
+                   minlength="3"
+                   maxlength="80"
+                   placeholder="Enter your full name"
+                   autocomplete="name"
+                   required>
+
+            <label for="enquiry-email">Email Address</label>
+
+            <input type="email"
+                   id="enquiry-email"
+                   name="Email Address"
+                   placeholder="example@email.com"
+                   autocomplete="email"
+                   required>
+
+            <label for="enquiry-phone">Phone Number</label>
+
+            <input type="tel"
+                   id="enquiry-phone"
+                   name="Phone Number"
+                   minlength="9"
+                   maxlength="18"
+                   placeholder="+27 00 000 0000"
+                   autocomplete="tel"
+                   required>
+
+            <label for="enquiry-type">Type of Enquiry</label>
+
+            <select id="enquiry-type"
+                    name="Type of Enquiry"
+                    required>
+
+                <option value="">Select enquiry type</option>
+                <option value="Service Enquiry">Service Enquiry</option>
+                <option value="Product Enquiry">Product Enquiry</option>
+                <option value="Volunteer Opportunity">Volunteer Opportunity</option>
+                <option value="Sponsorship Opportunity">Sponsorship Opportunity</option>
+                <option value="General Enquiry">General Enquiry</option>
+
+            </select>
+
+            <label for="service">Service of Interest</label>
+
+            <select id="service"
+                    name="Service of Interest"
+                    required>
+
+                <option value="">Select a service</option>
+                <option value="Soil Testing">Soil Testing</option>
+                <option value="Crop Management">Crop Management</option>
+                <option value="Greenhouse Services">Greenhouse Services</option>
+                <option value="Farm Maintenance">Farm Maintenance</option>
+                <option value="Agricultural Consultation">Agricultural Consultation</option>
+                <option value="Technology-Based Farming Solutions">Technology-Based Farming Solutions</option>
+                <option value="Other">Other</option>
+
+            </select>
+
+            <label for="enquiry-date">Preferred Date (if applicable)</label>
+
+            <input type="date"
+                   id="enquiry-date"
+                   name="Preferred Date">
+
+            <label for="enquiry-message">Additional Information</label>
+
+            <textarea id="enquiry-message"
+                      name="Additional Information"
+                      rows="6"
+                      minlength="10"
+                      maxlength="1000"
+                      placeholder="Tell us more about your enquiry."
+                      required></textarea>
+
+            <p class="form-feedback"
+               aria-live="polite"></p>
+
+            <button type="submit">
+                Submit Enquiry
+            </button>
+
+        </form>
+
+    </section>
+
+</main>
+
+<footer>
+    <p>
+        &copy; <span data-year>2026</span>
+        Lilitha's Nature Relief. All Rights Reserved.
+    </p>
+</footer>
+
+<script src="../js/script.js"></script>
+
+</body>
+</html>
